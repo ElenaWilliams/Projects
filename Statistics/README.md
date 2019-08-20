@@ -3,7 +3,7 @@
 
 
 
-**Content structure:**
+### Content structure:
 
 1. Introduction
 2. Exploratory Data Analysis
@@ -49,16 +49,13 @@ The main objective of this study is to explore the connections between pain leve
 ~~~~
 # Uploading the libraries
 library(psych)
-library(tidyr)
+library(broom)
 library(stringr)
 library(ggplot2)
-library(dplyr)
-library(car)
 library(caTools)
-library(broom)
 library(purrr)
+library(dplyr)
 library(plyr)
-library(multcomp)
 library(sjPlot)
 library(sjmisc)
 
@@ -83,9 +80,11 @@ demographicDB <- read.csv("demographic_data.csv")
 # summary(demographicDB) First check the summary figures for the data set and note that there are blank cells in the table
 
 # Cleaning data
+# I remove the first variable containing participants' IDs because it will not be used throughout the analysis and, thus, is not relevant for this study
+demographicDB = demographicDB[,-1] 
+# I rename a column with the pain scale for an easier access
 
-demographicDB = demographicDB[,-1] # I remove the first variable containing participant's ID because it will not be used throughout the analysis and is not relevant for this study
-colnames(demographicDB) = c("Diagnosis", "Gender", "Age", "Ethnicity", "Pain_VAS") # I rename a column with the pain scale for an easier access
+colnames(demographicDB) = c("Diagnosis", "Gender", "Age", "Ethnicity", "Pain_VAS") 
 
 # Converting missings into NAs for pain variable
 demographicDB$Pain_VAS[demographicDB$Pain_VAS==""] <- NA
@@ -102,26 +101,24 @@ demographicDB$Ethnicity = as.factor(demographicDB$Ethnicity)
 
 ### 2.2. Setting hypothesis
 
-In a given sample we have 59 men and 58 women. I would like to examine whether the levels of 9 different biomarkers taken at the beginning of the study vary between males and females.
-
+In a given patients sample 111 women and 371 men have recordings of their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
 
 The following hypothesis were set:
 
-*H0.1 : There is no difference in pain perception between men and women*
-*Ha.1: There is a difference in pain perception between men and women*
+*H0.1 : There is no difference in pain sensations between men and women*
+*Ha.1: There is a difference in pain sensations between men and women*
 
-*H0.2 : There is no difference in pain perception between the given diagnosis*
-*Ha.2: There is a difference in pain perception between the given diagnosis*
+*H0.2 : There is no difference in pain sensations between the given diagnosis*
+*Ha.2: There is a difference in pain sensations between the given diagnosis*
 
 
-Based on the null hypothesis we assume that there is no difference in biomarker levels between men and women. Otherwise, the alternative hypothesis is that the true difference in means is not equal to 0.
+Based on the null hypothesis we assume that there is (HO.1) no difference in pain sensations between men and women and (H0.2) there is no difference in pain sensations between the patients with different diagnosis. Otherwise, the alternative hypothesis is that the true difference in means is not equal to 0.
 
 The pain levels is a continuous random variable and the gender, diagnosis and ethnicity characteristics are discrete random variables.
 
-Before performing a hypothesis tests I will look at the distributions of the variables of interest using histogram plot and grouped bar charts.
+Before performing hypothesis tests I will look at the distributions of the variables using histogram plot and grouped bar charts.
 
 
-111 women and 371 men recorded their pain levels
 
 ### 2.3. Visualising the Distribution
 
