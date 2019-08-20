@@ -27,7 +27,7 @@
 
 References
 
-__
+_____________________________________________________________________________________________
 
 
 # 1. Introduction
@@ -106,9 +106,11 @@ In a given patients sample 111 women and 371 men have recordings of their pain l
 The following hypothesis were set:
 
 *H0.1 : There is no difference in pain sensations between men and women*
+
 *Ha.1: There is a difference in pain sensations between men and women*
 
 *H0.2 : There is no difference in pain sensations between the given diagnosis*
+
 *Ha.2: There is a difference in pain sensations between the given diagnosis*
 
 
@@ -274,9 +276,10 @@ knitr::kable(table_2, caption = "Skewness and Kurtosis coefficients", floating.e
 Finally, I have checked the data on homogeneity of variances using Bartlett's test. Proteins IL.6 and CSF.1 have shown a significant P-value at 0.05 level. For these variables the variance is not homogeneous and correction is needed.
 
 ```{r, message=FALSE}
-
-#bartlett.test(demographicDB$Pain_VAS,demographicDB$Gender) # p value is not significant at 0.005 level, the variance is homogeneous, correction does not needed.
-#bartlett.test(demographicDB$Pain_VAS,demographicDB$Diagnosis) # p value is not significant at 0.005 level, the variance is homogeneous, correction does not needed.
+ # p value is not significant at 0.005 level, the variance is homogeneous, correction does not needed
+bartlett.test(demographicDB$Pain_VAS,demographicDB$Gender)
+# p value is not significant at 0.005 level, the variance is homogeneous, correction does not needed
+bartlett.test(demographicDB$Pain_VAS,demographicDB$Diagnosis) 
 
 table_3 = data.frame("Varibale" = c("Gender", "Diagnosis"),"K-squared" = c(1.2859, 8.1294), "p-value" = c(0.2568, 0.2288))
 pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity of variances")
@@ -368,9 +371,7 @@ The dependent variable is a pain level measured one year after onset and indepen
 The results have shown that proteins OPG, TGF.beta.1 and IL.6 are strongly related to pain at 0.05 significance level. Both estimates have negative sign meaning that the higher the pain the lower the protein level or vice versa.
 
 
-\begin{center}
 Table 6: Results of Regression model
-\end{center}
 
 ```{r,warning=FALSE}
 set.seed(101) 
@@ -389,9 +390,7 @@ plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
 
 None of the variables in the model suffers from multicollinearity. Overall the model fits the data quite well.
 
-\begin{center}
 Table 6: VIF
-\end{center}
 
 ```{r, message=FALSE}
 pander::panderOptions('table.continues', '')
@@ -405,9 +404,8 @@ Usung the previous model I have predicted the pain levels for the remaining 20 %
 
 To evaluate how well the model predicts the pain level I have used an error metric called Root Mean Squared Error. I first have squared the difference between the predicted and the actual values. Then I have calculated the mean and took the square root of it. The average deviation of the estimates from the actual values is 3.3. 
 
-\begin{center}
 Table 7: First five Actual vs Predicted values and their difference
-\end{center}
+
 ```{r, message=FALSE}
 pred <- predict(model1,  newdata = test)
 
@@ -419,7 +417,7 @@ table4$Difference = round(table4$Difference,1)
 pander::pander(head(table4,5),caption = "")
 ```
 
-Root Mean Squared Error
+Root Mean Squared Error is 2.8
 ```{r, message=FALSE}
 table4 = subset(table4, !is.na(Difference))
 sqrt(mean(table4$Difference^2))
