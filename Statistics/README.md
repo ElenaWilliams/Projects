@@ -1,4 +1,4 @@
-# Statistics
+## *Statistical analysis: Exploring the connections between pain levels and patients' demographic characteristics
 #### Elena Williams
 
 
@@ -30,7 +30,7 @@ References
 
 # 1. Introduction
 
-In the presented statistical report, I am going to analyze a dataset from a recent study published in Nature (Niculescu & et al, 2019) where scientists endeavored to identify objective blood biomarkers for pain, a subjective sensation with a biological basis. The sample of interest were psychiatric patients, a high risk group for co-morbid pain disorders and increased perception of pain. The data on demographic characterists was published along with the paper and will be examined in the following report. 
+In the presented report, I am going to analyze a dataset from a recent study published in Nature (Niculescu & et al, 2019) where scientists endeavored to identify objective blood biomarkers for pain, a subjective sensation with a biological basis. The sample of interest were psychiatric patients, a high risk group for co-morbid pain disorders and increased perception of pain. The data on demographic characterists was published along with the paper and will be examined in the following report. 
 
 In the dataset there are 794 observations (patients) and 6 characteristics:
 
@@ -60,7 +60,7 @@ library(sjPlot)
 library(sjmisc)
 
 # Uploading code for mupltiplot
-source("~/Documents/Projects/Statistics/multiplot.R")
+source("multiplot.R")
 
 # Setting the theme for linear regression plot
 set_theme(base = theme_minimal())
@@ -76,7 +76,7 @@ I note that there are blank cells in the data set. The pain variable has 181 mis
 
 ```{r, warning=FALSE, message=FALSE}
 # Uploading the data
-demographicDB <- read.csv("~/Documents/Projects/Statistics/demographic_data.csv")
+demographicDB <- read.csv("demographic_data.csv")
 
 # summary(demographicDB) First check the summary figures for the data set and note that there are blank cells in the table
 
