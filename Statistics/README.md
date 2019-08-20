@@ -27,23 +27,26 @@
 
 References
 
+__
+
 
 # 1. Introduction
 
-In the presented report, I am going to analyze a dataset from a recent study published in Nature (Niculescu & et al, 2019) where scientists endeavored to identify objective blood biomarkers for pain, a subjective sensation with a biological basis. The sample of interest were psychiatric patients, a high risk group for co-morbid pain disorders and increased perception of pain. The data on demographic characterists was published along with the paper and will be examined in the following report. 
+In the presented report, I am going to analyse a dataset from a recent study published in Nature (Niculescu & et al, 2019) where scientists endeavored to identify objective blood biomarkers for pain, a subjective sensation with a biological basis. The sample of interest were psychiatric patients, a high risk group for co-morbid pain disorders and increased perception of pain. The data on demographic characterists was published along with the paper and will be examined in the following report. 
 
-In the dataset there are 794 observations (patients) and 6 characteristics:
+In the study there were 794 observations (patients) and 6 characteristics given:
 
-* Participant ID: - ID attached to each of the participant of the study
-* Diagnosis: - sample included patients with psychiatric conditions like Bipolar disorder (BP),  Schizoaffective disorder (SZA), Schizophrenia (SZ), Major depressive disorder (MDD), Post-traumatic stress disorder (PTSD), Mood disorder (MOOD) and others. 
-* Gender: - male or female
-* Age: - age of the participants
-* Ethnicity: - sample contained patients whose ethnicity was Caucasian, African American, Hispanic, Asian American, Mixed and Asian
-* Pain Scale: - reported pain level on a scale from 1 to 10
+* Participant ID:  ID attached to each of the participant of the study
+* Gender:  male or female
+* Age:  age of the participants
+* Ethnicity:  sample contained patients whose ethnicity was Caucasian, African American, Hispanic, Asian American, Mixed and Asian
+* Pain Scale:  reported pain level on a scale from 1 to 10
+* Diagnosis:  sample included patients with psychiatric conditions like Bipolar disorder (BP),  Schizoaffective disorder (SZA), Schizophrenia (SZ), Major depressive disorder (MDD), Post-traumatic stress disorder (PTSD), Mood disorder (MOOD) and others
+
 
 The main objective of this study is to explore the connections between pain levels and demographic data.
 
-```{r, warning=FALSE, message=FALSE}
+---
 # Uploading the libraries
 library(psych)
 library(tidyr)
@@ -65,7 +68,7 @@ source("multiplot.R")
 # Setting the theme for linear regression plot
 set_theme(base = theme_minimal())
 
-```
+---
 
 # 2. Exploratory Data Analysis
 
@@ -82,8 +85,8 @@ demographicDB <- read.csv("demographic_data.csv")
 
 # Cleaning data
 
-demographicDB = demographicDB[,-1] # I remove the first variable containing participant's ID because it will not be used throughout the analysis and is not relevant for this study.
-colnames(demographicDB) = c("Diagnosis", "Gender", "Age", "Ethnicity", "Pain_VAS") # I rename a column with the pain scale for easier access. 
+demographicDB = demographicDB[,-1] # I remove the first variable containing participant's ID because it will not be used throughout the analysis and is not relevant for this study
+colnames(demographicDB) = c("Diagnosis", "Gender", "Age", "Ethnicity", "Pain_VAS") # I rename a column with the pain scale for an easier access
 
 # Converting missings into NAs for pain variable
 demographicDB$Pain_VAS[demographicDB$Pain_VAS==""] <- NA
