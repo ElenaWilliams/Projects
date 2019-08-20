@@ -1,0 +1,795 @@
+Participant ID,Diagnosis,Gender,Age,Ethnicity,Pain Scale(1-10)
+phchp004,SZA,M,60,African American,2
+phchp004,SZA,M,60,African American,0
+phchp004,SZA,M,63,African American,8
+phchp052,SZ,M,60,Caucasian,7
+phchp052,SZ,M,60,Caucasian,0
+phchp052,SZ,M,60,Caucasian,0
+phchp106,BP,F,28,Mixed,2
+phchp106,BP,F,29,Mixed,6
+phchp131,SZ,F,54,African American,7
+phchp131,SZ,F,55,African American,0
+phchp131,SZ,F,56,African American,0
+phchp134,BP,M,59,Caucasian,0
+phchp134,BP,M,59,Caucasian,7
+phchp134,BP,M,61,Caucasian,1
+phchp134,BP,M,62,Caucasian,0
+phchp134,BP,M,62,Caucasian,0
+phchp136,BP,M,41,Caucasian,0
+phchp136,BP,M,41,Caucasian,8
+phchp140,BP,M,38,Caucasian,0
+phchp140,BP,M,38,Caucasian,6
+phchp140,BP,M,38,Caucasian,0
+phchp142,BP,M,55,Caucasian,8
+phchp142,BP,M,55,Caucasian,6
+phchp142,BP,M,55,Caucasian,9
+phchp142,BP,M,57,Caucasian,0
+phchp142,BP,M,58,Caucasian,7
+phchp153,BP,M,55,Caucasian,6
+phchp153,BP,M,56,Caucasian,1
+phchp153,BP,M,57,Caucasian,0
+phchp153,BP,M,58,Caucasian,0
+phchp154,PSYCH,M,51,African American,8
+phchp154,PSYCH,M,51,African American,0
+phchp154,PSYCH,M,52,African American,0
+phchp164,MDD,F,48,Caucasian,2
+phchp164,MDD,F,49,Caucasian,6
+phchp185,SZA,M,51,African American,7
+phchp185,SZA,M,51,African American,0
+phchp185,SZA,M,52,African American,7
+phchp191,SZA,M,58,African American,0
+phchp191,SZA,M,58,African American,8
+phchp191,SZA,M,59,African American,0
+phchp192,SZA,M,55,African American,2
+phchp192,SZA,M,56,African American,7
+phchp205,PTSD,F,54,Caucasian,0
+phchp205,PTSD,F,54,Caucasian,10
+phchp205,PTSD,F,54,Caucasian,7
+phchp209,PTSD,M,54,African American,6
+phchp209,PTSD,M,54,African American,6
+phchp209,PTSD,M,54,African American,0
+phchp210,BP,M,43,Caucasian,1
+phchp210,BP,M,43,Caucasian,6
+phchp214,PTSD,F,52,Caucasian,1
+phchp214,PTSD,F,57,Caucasian,7
+phchp221,MDD,M,51,African American,6
+phchp221,MDD,M,51,African American,6
+phchp221,MDD,M,52,African American,2
+phchp223,SZA,F,60,Caucasian,8
+phchp223,SZA,F,60,Caucasian,2
+phchp223,SZA,F,61,Caucasian,1
+phchp243,PTSD,M,50,African American,"6,5"
+phchp243,,M,54,African American,2
+phchp291,SZ,F,45,Caucasian,2
+phchp291,SZ,F,46,Caucasian,6
+phchp291,SZ,F,48,Caucasian,6
+phchp302,BP,M,61,Caucasian,2
+phchp302,BP,M,61,Caucasian,6
+phchp323,PTSD,M,32,Caucasian,2
+phchp323,PTSD,M,33,Caucasian,7
+phchp332,SZA,F,48,African American,2
+phchp332,SZA,F,48,African American,8
+phchp334,BP,F,50,Caucasian,6
+phchp334,BP,F,51,Caucasian,2
+phchp341,MDD,M,45,Caucasian,"6,5"
+phchp341,MDD,M,45,Caucasian,7
+phchp341,MDD,M,45,Caucasian,8
+phchp341,MDD,M,46,Caucasian,2
+phchp341,MDD,M,46,Caucasian,2
+phchp349,PSYCH,M,58,Caucasian,6
+phchp349,PSYCH,M,58,Caucasian,0
+phchp003,SZ,M,50,African American,
+phchp003,SZ,M,50,African American,
+phchp003,SZ,M,50,African American,
+phchp003,SZ,M,57,African American,1
+phchp003,SZ,M,59,African American,4
+phchp004,SZA,M,55,African American,
+phchp005,SZA,M,45,Caucasian,
+phchp005,SZA,M,45,Caucasian,
+phchp005,SZA,M,45,Caucasian,
+phchp006,SZA,M,52,African American,
+phchp006,SZA,M,52,African American,
+phchp008,SZ,M,47,African American,
+phchp009,SZ,M,55,African American,
+phchp009,SZ,M,56,African American,
+phchp010,SZA,M,45,Caucasian,
+phchp010,SZA,M,45,Caucasian,
+phchp010,SZA,M,45,Caucasian,
+phchp012,SZA,M,55,Caucasian,
+phchp012,SZA,M,55,Caucasian,
+phchp012,SZA,M,55,Caucasian,
+phchp013,SZA,M,53,African American,
+phchp013,SZA,M,54,African American,
+phchp014,PSYCH,M,55,African American,
+phchp016,SZ,M,54,African American,
+phchp016,SZ,M,54,African American,
+phchp016,SZ,M,54,African American,
+phchp017,SZA,M,53,African American,
+phchp017,SZA,M,54,African American,
+phchp018,SZA,F,54,Caucasian,
+phchp019,SZ,M,50,African American,
+phchp019,SZ,M,51,African American,
+phchp019,SZ,M,51,African American,
+phchp019,SZ,M,59,African American,0
+phchp020,BP,M,62,Caucasian,
+phchp020,BP,M,62,Caucasian,
+phchp020,BP,M,63,Caucasian,
+phchp021,SZA,M,48,Hispanic,
+phchp021,SZA,M,49,Hispanic,
+phchp021,SZA,M,49,Hispanic,
+phchp022,SZ,M,48,Caucasian,
+phchp022,SZ,M,48,Caucasian,
+phchp023,BP,M,52,Caucasian,
+phchp023,BP,M,52,Caucasian,
+phchp023,BP,M,52,Caucasian,
+phchp024,SZA,M,49,African American,
+phchp025,SZ,M,42,Caucasian,
+phchp026,SZA,M,49,African American,
+phchp026,SZA,M,49,African American,
+phchp026,SZA,M,49,African American,
+phchp027,SZA,M,40,Caucasian,
+phchp028,BP,F,50,Asian,
+phchp028,BP,F,50,Asian,
+phchp029,MDD,M,56,Caucasian,
+phchp030,BP,M,49,Caucasian,
+phchp030,BP,M,49,Caucasian,
+phchp031,BP,M,51,Caucasian,
+phchp031,BP,M,51,Caucasian,
+phchp031,BP,M,52,Caucasian,
+phchp033,SZA,M,48,Caucasian,
+phchp034,BP,F,51,Asian American,
+phchp034,BP,F,52,Asian American,
+phchp034,BP,F,52,Asian American,
+phchp035,BP,F,36,Caucasian,
+phchp035,BP,F,37,Caucasian,
+phchp035,BP,F,37,Caucasian,
+phchp037,BP,F,52,Caucasian,
+phchp038,SZA,M,58,African American,
+phchp038,SZA,M,58,African American,
+phchp038,SZA,M,59,African American,
+phchp039,BP,M,52,Caucasian,
+phchp039,BP,M,52,Caucasian,
+phchp040,SZA,M,50,Caucasian,
+phchp040,SZA,M,50,Caucasian,
+phchp040,SZA,M,50,Caucasian,
+phchp041,SZ,M,62,African American,
+phchp042,SZA,M,43,Caucasian,
+phchp042,SZA,M,43,Caucasian,
+phchp042,SZA,M,44,Caucasian,
+phchp043,BP,F,30,Caucasian,
+phchp043,BP,F,31,Caucasian,
+phchp043,BP,F,31,Caucasian,
+phchp046,SZA,M,45,Caucasian,
+phchp046,SZA,M,45,Caucasian,
+phchp046,SZA,M,45,Caucasian,
+phchp047,SZA,M,57,African American,
+phchp047,SZA,M,57,African American,
+phchp047,SZA,M,58,African American,
+phchp048,SZA,M,56,African American,
+phchp048,SZA,M,57,African American,
+phchp048,SZA,M,57,African American,
+phchp049,SZA,M,46,Caucasian,
+phchp049,SZA,M,47,Caucasian,
+phchp051,SZA,M,52,Caucasian,
+phchp053,BP,M,58,Caucasian,
+phchp053,BP,M,58,Caucasian,
+phchp053,BP,M,58,Caucasian,
+phchp055,BP,F,46,Caucasian,
+phchp055,BP,F,46,Caucasian,
+phchp055,BP,F,46,Caucasian,
+phchp056,BP,M,36,Caucasian,
+phchp057,SZA,M,47,Caucasian,
+phchp058,SZ,M,56,African American,
+phchp058,SZ,M,56,African American,
+phchp058,SZ,M,56,African American,
+phchp060,SZ,M,62,Caucasian,
+phchp061,SZ,M,49,Caucasian,
+phchp061,SZ,M,49,Caucasian,
+phchp061,SZ,M,50,Caucasian,
+phchp062,SZ,M,56,Caucasian,
+phchp062,SZ,M,56,Caucasian,
+phchp062,SZ,M,57,Caucasian,
+phchp063,SZ,F,46,African American,
+phchp064,BP,F,59,African American,
+phchp064,BP,F,59,African American,
+phchp065,SZA,M,62,Caucasian,
+phchp065,SZA,M,62,Caucasian,
+phchp065,SZA,M,62,Caucasian,
+phchp067,BP,M,39,Caucasian,
+phchp067,BP,M,40,Caucasian,
+phchp068,SZA,M,57,African American,
+phchp068,SZA,M,57,African American,
+phchp068,SZA,M,57,African American,
+phchp069,SZ,M,47,Caucasian,
+phchp069,SZ,M,47,Caucasian,
+phchp069,SZ,M,48,Caucasian,
+phchp070,SZ,M,52,African American,
+phchp070,SZ,M,52,African American,
+phchp070,SZ,M,52,African American,
+phchp070,SZ,M,56,African American,0
+phchp070,SZ,M,56,African American,0
+phchp070,SZ,M,57,African American,0
+phchp071,SZA,F,50,African American,
+phchp072,SZA,M,60,Caucasian,
+phchp072,SZA,M,60,Caucasian,
+phchp072,SZA,M,60,Caucasian,
+phchp073,SZA,M,50,Caucasian,
+phchp073,SZA,M,50,Caucasian,
+phchp073,SZA,M,50,Caucasian,
+phchp074,SZA,F,46,African American,
+phchp074,SZA,F,46,African American,
+phchp074,SZA,F,46,African American,
+phchp075,SZA,M,57,Caucasian,
+phchp075,SZA,M,58,Caucasian,
+phchp075,SZA,M,58,Caucasian,
+phchp076,SZA,F,41,African American,
+phchp076,SZA,F,41,African American,
+phchp076,SZA,F,41,African American,
+phchp078,BP,F,62,Caucasian,
+phchp079,BP,M,44,Caucasian,
+phchp079,BP,M,44,Caucasian,
+phchp079,BP,M,45,Caucasian,
+phchp079,BP,M,49,Caucasian,0
+phchp079,BP,M,50,Caucasian,0
+phchp079,BP,M,50,Caucasian,0
+phchp080,BP,M,44,Caucasian,
+phchp081,SZA,M,53,African American,
+phchp081,SZA,M,53,African American,
+phchp083,SZ,M,50,African American,
+phchp083,SZ,M,50,African American,
+phchp083,SZ,M,51,African American,
+phchp084,BP,F,49,Caucasian,
+phchp084,BP,F,49,Caucasian,
+phchp084,BP,F,50,Caucasian,
+phchp084,BP,F,57,Caucasian,4
+phchp085,SZA,M,57,Caucasian,
+phchp085,SZA,M,57,Caucasian,
+phchp085,SZA,M,57,Caucasian,
+phchp086,SZ,M,49,Caucasian,
+phchp086,SZ,M,49,Caucasian,
+phchp086,SZ,M,49,Caucasian,
+phchp087,SZA,M,65,Caucasian,
+phchp087,SZA,M,66,Caucasian,
+phchp087,SZA,M,66,Caucasian,
+phchp088,BP,M,44,Caucasian,
+phchp088,BP,M,45,Caucasian,
+phchp088,BP,M,45,Caucasian,
+phchp088,BP,M,49,Caucasian,4
+phchp088,BP,M,50,Caucasian,7
+phchp088,BP,M,51,Caucasian,"3,5"
+phchp089,SZA,M,33,Caucasian,
+phchp089,SZA,M,33,Caucasian,
+phchp089,SZA,M,38,Caucasian,5
+phchp091,SZA,M,55,Caucasian,
+phchp091,SZA,M,55,Caucasian,
+phchp091,SZA,M,55,Caucasian,
+phchp092,BP,M,45,African American,
+phchp092,BP,M,46,African American,
+phchp092,BP,M,46,African American,0
+phchp093,BP,M,51,Caucasian,4
+phchp093,BP,M,51,Caucasian,6
+phchp093,BP,M,52,Caucasian,7
+phchp093,BP,M,56,Caucasian,4
+phchp093,BP,M,57,Caucasian,4
+phchp093,BP,M,57,Caucasian,4
+phchp094,BP,M,41,African American,
+phchp095,BP,M,28,Caucasian,3
+phchp095,BP,M,29,Caucasian,0
+phchp095,BP,M,29,Caucasian,3
+phchp096,SZ,M,55,African American,8
+phchp096,SZ,M,56,African American,6
+phchp096,SZ,M,58,African American,5
+phchp097,SZA,F,25,Caucasian,3
+phchp097,SZA,F,26,Caucasian,5
+phchp097,SZA,F,26,Caucasian,7
+phchp098,SZ,M,59,African American,0
+phchp099,SZ,M,49,Caucasian,4
+phchp099,SZ,M,49,Caucasian,0
+phchp099,SZ,M,49,Caucasian,0
+phchp100,BP,M,28,Caucasian,0
+phchp101,SZA,M,74,Caucasian,8
+phchp102,SZA,M,56,Caucasian,0
+phchp102,SZA,M,56,Caucasian,5
+phchp102,SZA,M,56,Caucasian,1
+phchp103,SZA,M,61,Caucasian,
+phchp105,SZA,M,59,Caucasian,0
+phchp106,BP,F,28,Mixed,3
+phchp108,SZ,M,42,Caucasian,3
+phchp108,SZ,M,42,Caucasian,2
+phchp108,SZ,M,43,Caucasian,0
+phchp109,BP,M,22,Caucasian,1
+phchp109,BP,M,25,Caucasian,
+phchp112,BP,M,46,Caucasian/Native Australian,0
+phchp112,BP,M,46,Caucasian,0
+phchp112,BP,M,47,Caucasian,0
+phchp113,BP,M,37,Caucasian,7
+phchp114,SZA,M,54,African American,5
+phchp115,BP,M,67,Caucasian,2
+phchp115,BP,M,67,Caucasian,1
+phchp115,BP,M,68,Caucasian,1
+phchp116,SZA,M,47,Caucasian,7
+phchp117,BP,M,43,Caucasian,2
+phchp117,BP,M,43,Caucasian,3
+phchp117,BP,M,43,Caucasian,5
+phchp118,SZA,M,46,African American,4
+phchp118,SZA,M,47,African American,5
+phchp118,SZA,M,50,African American,6
+phchp119,SZA,M,56,African American,1
+phchp119,SZA,M,56,African American,1
+phchp120,SZ,M,51,Caucasian,6
+phchp120,SZ,M,51,Caucasian,4
+phchp120,SZ,M,51,Caucasian,6
+phchp121,MOOD,M,55,Caucasian,10
+phchp121,MOOD,M,56,Caucasian,6
+phchp121,MOOD,M,56,Caucasian,8
+phchp122,BP,M,51,Caucasian,0
+phchp122,BP,M,51,Caucasian,4
+phchp124,BP,M,53,Caucasian,3
+phchp124,BP,M,54,Caucasian,3
+phchp127,SZA,F,58,Caucasian,7
+phchp127,SZA,F,58,Caucasian,6
+phchp127,SZA,F,59,Caucasian,5
+phchp128,BP,M,45,Caucasian,4
+phchp128,BP,M,45,Caucasian,1
+phchp129,SZA,M,22,Caucasian,0
+phchp129,SZA,M,25,Caucasian,0
+phchp129,SZA,M,27,Caucasian,0
+phchp130,MDD,F,42,Caucasian,2
+phchp130,MDD,F,42,Caucasian,4
+phchp130,MDD,F,42,Caucasian,4
+phchp132,BP,M,51,Caucasian,7
+phchp132,BP,M,51,Caucasian,7
+phchp132,BP,M,52,Caucasian,7
+phchp132,BP,M,54,Caucasian,8
+phchp132,BP,M,54,Caucasian,8
+phchp132,BP,M,55,Caucasian,8
+phchp133,SZ,M,55,Caucasian,8
+phchp134,BP,M,59,Caucasian,4
+phchp136,BP,M,41,Caucasian,3
+phchp138,MOOD,M,59,African American,0
+phchp138,MOOD,M,59,African American,5
+phchp138,MOOD,M,59,African American,0
+phchp139,SZ,M,24,Caucasian,0
+phchp140,BP,M,40,Caucasian,5
+phchp141,BP,F,47,Caucasian,6
+phchp141,BP,F,47,Caucasian,7
+phchp141,BP,F,47,Caucasian,6
+phchp142,BP,M,57,Caucasian,3
+phchp143,BP,F,62,African American,5
+phchp143,BP,F,63,African American,8
+phchp143,BP,F,63,African American,7
+phchp144,SZ,M,56,African American,0
+phchp147,BP,M,38,Caucasian,3
+phchp147,BP,M,38,Caucasian,3
+phchp147,BP,M,38,Caucasian,4
+phchp148,SZ,M,25,Caucasian,0
+phchp149,MOOD,M,45,Caucasian,0
+phchp149,MOOD,M,45,Caucasian,0
+phchp149,MOOD,M,46,Caucasian,1
+phchp150,SZA,M,61,Caucasian,7
+phchp150,SZA,M,61,Caucasian,4
+phchp150,SZA,M,62,Caucasian,7
+phchp151,SZ,M,24,Caucasian,2
+phchp151,SZ,M,24,Caucasian,0
+phchp151,SZ,M,24,Caucasian,5
+phchp152,BP,M,45,Caucasian,4
+phchp153,BP,M,55,Caucasian,4
+phchp155,MDD,M,37,Caucasian,10
+phchp155,MDD,M,37,Caucasian,5
+phchp156,BP,F,35,Caucasian,4
+phchp157,BP,M,57,African American,7
+phchp157,BP,M,57,African American,6
+phchp157,BP,M,58,African American,7
+phchp158,BP,M,23,African American,3
+phchp160,SZA,F,41,Caucasian,5
+phchp160,SZA,F,41,Caucasian,4
+phchp160,SZA,F,41,Caucasian,6
+phchp161,MDD,M,54,African American,1
+phchp161,MDD,M,54,African American,4
+phchp161,MDD,M,54,African American,4
+phchp162,MDD,M,57,Caucasian,5
+phchp162,MDD,M,57,Caucasian,4
+phchp162,MDD,M,57,Caucasian,5
+phchp164,MDD,F,49,Caucasian,3
+phchp165,SZ,M,60,African American,0
+phchp165,SZ,M,60,African American,0
+phchp165,SZ,M,61,African American,0
+phchp166,BP,M,56,Caucasian,4
+phchp166,BP,M,56,Caucasian,0
+phchp166,BP,M,56,Caucasian,4
+phchp166,BP,M,58,Caucasian,3
+phchp166,BP,M,58,Caucasian,3
+phchp166,BP,M,59,Caucasian,4
+phchp167,MDD,M,49,Caucasian,8
+phchp168,MDD,M,48,African American,2
+phchp168,MDD,M,48,African American,0
+phchp168,MDD,M,49,African American,0
+phchp169,SZA,M,50,African American,10
+phchp170,MDD,F,26,Caucasian,1
+phchp170,MDD,F,26,Caucasian,2
+phchp170,MDD,F,26,Caucasian,2
+phchp171,BP,M,36,Caucasian,1
+phchp171,BP,M,36,Caucasian,1
+phchp172,BP,F,24,Caucasian,2
+phchp172,BP,F,24,Caucasian,0
+phchp172,BP,F,25,Caucasian,2
+phchp173,MDD,M,48,Caucasian,4
+phchp173,MDD,M,49,Caucasian,3
+phchp173,MDD,M,49,Caucasian,6
+phchp174,MDD,M,54,Caucasian,6
+phchp175,SZA,M,42,Caucasian,0
+phchp176,SZ,M,23,African American,0
+phchp176,SZ,M,24,African American,5
+phchp177,SZ,F,39,Caucasian,0
+phchp177,SZ,F,39,Caucasian,0
+phchp178,BP,M,49,Caucasian,5
+phchp179,BP,M,36,Caucasian,1
+phchp179,BP,M,37,Caucasian,3
+phchp179,BP,M,37,Caucasian,2
+phchp180,BP,F,47,Caucasian,0
+phchp180,BP,F,47,Caucasian,0
+phchp180,BP,F,47,Caucasian,0
+phchp181,BP,F,28,Caucasian,5
+phchp181,BP,F,28,Caucasian,1
+phchp181,BP,F,29,Caucasian,0
+phchp182,MDD,M,39,Caucasian,5
+phchp182,MDD,M,39,Caucasian,7
+phchp182,MDD,M,40,Caucasian,8
+phchp183,BP,M,48,Caucasian,3
+phchp183,BP,M,48,Caucasian,0
+phchp184,BP,M,64,Caucasian,4
+phchp184,BP,M,64,Caucasian,0
+phchp184,BP,M,64,Caucasian,5
+phchp186,BP,M,43,Caucasian,2
+phchp186,BP,M,44,Caucasian,3
+phchp186,BP,M,44,Caucasian,2
+phchp186,BP,M,46,Caucasian,3
+phchp186,BP,M,48,Caucasian,1
+phchp187,SZ,M,49,African American,3
+phchp187,SZ,M,49,African American,9
+phchp188,PSYCH,M,48,African American,
+phchp188,PSYCH,M,49,African American,
+phchp188,PSYCH,M,54,African American,8
+phchp189,SZ,M,25,Caucasian,0
+phchp189,SZ,M,25,Caucasian,2
+phchp190,BP,M,49,Caucasian,0
+phchp190,BP,M,49,Caucasian,0
+phchp190,BP,M,50,Caucasian,0
+phchp190,BP,M,54,Caucasian,0
+phchp192,SZA,M,56,African American,5
+phchp193,BP,M,39,Hispanic,
+phchp193,BP,M,39,Hispanic,0
+phchp193,BP,M,40,Hispanic,0
+phchp194,MDD,M,47,Caucasian,1
+phchp194,MDD,M,47,Caucasian,1
+phchp194,MDD,M,47,Caucasian,3
+phchp195,SZ,M,52,Caucasian,5
+phchp195,SZ,M,53,Caucasian,6
+phchp195,SZ,M,53,Caucasian,4
+phchp196,MDD,M,56,African American,6
+phchp196,MDD,M,56,African American,6
+phchp196,MDD,M,57,African American,5
+phchp197,SZ,M,56,Caucasian,4
+phchp197,SZ,M,57,Caucasian,1
+phchp197,SZ,M,57,Caucasian,2
+phchp197,SZ,M,58,Caucasian,2
+phchp198,MDD,M,61,Caucasian,8
+phchp198,MDD,M,61,Caucasian,8
+phchp198,MDD,M,62,Caucasian,9
+phchp199,SZ,M,49,African American,0
+phchp199,SZ,M,49,African American,0
+phchp199,SZ,M,50,African American,0
+phchp200,MDD,M,56,Caucasian,2
+phchp200,MDD,M,57,Caucasian,2
+phchp200,MDD,M,57,Caucasian,0
+phchp203,MOOD,M,59,African American,8
+phchp203,MOOD,M,59,African American,3
+phchp204,BP,F,49,Caucasian,0
+phchp204,BP,F,49,Caucasian,0
+phchp204,BP,F,49,Caucasian,3
+phchp206,MDD,M,59,African American,7
+phchp207,SZ,M,48,African American,6
+phchp208,MDD,M,56,African American,4
+phchp208,MDD,M,56,African American,7
+phchp208,MDD,M,58,African American,7
+phchp210,BP,M,44,Caucasian,4
+phchp211,SZ,M,62,Caucasian,0
+phchp211,SZ,M,62,Caucasian,2
+phchp211,SZ,M,62,Caucasian,2
+phchp212,MDD,M,56,African American,7
+phchp212,MDD,M,56,African American,8
+phchp213,PTSD,M,62,Caucasian,5
+phchp213,PTSD,M,62,Caucasian,4
+phchp213,PTSD,M,62,Caucasian,0
+phchp214,PTSD,F,53,Caucasian,5
+phchp215,PTSD,F,58,Caucasian,"7,5"
+phchp215,PTSD,F,58,Caucasian,7
+phchp215,PTSD,F,61,Caucasian,5
+phchp216,MOOD,M,50,African American,8
+phchp216,MOOD,M,51,African American,9
+phchp216,MOOD,M,51,African American,8
+phchp217,PTSD,M,36,African American,0
+phchp219,BP,M,61,Caucasian,5
+phchp219,BP,M,61,Caucasian,1
+phchp219,BP,M,62,Caucasian,1
+phchp222,SZ,M,60,Caucasian,4
+phchp222,SZ,M,61,Caucasian,3
+phchp224,BP,M,59,Caucasian,2
+phchp225,PSYCH,M,58,African American,1
+phchp226,MDD,M,29,Caucasian,1
+phchp226,MDD,M,29,Caucasian,1
+phchp226,MDD,M,30,Caucasian,1
+phchp227,MDD,M,55,Caucasian,3
+phchp227,MDD,M,55,Caucasian,4
+phchp227,MDD,M,55,Caucasian,5
+phchp228,PTSD,M,43,African American,4
+phchp229,PTSD,M,55,African American,2
+phchp231,MDD,M,55,Caucasian,7
+phchp232,SZA,F,38,Caucasian,6
+phchp232,SZA,F,38,Caucasian,6
+phchp232,SZA,F,38,Caucasian,3
+phchp234,BP,M,44,Caucasian,2
+phchp234,BP,M,45,Caucasian,2
+phchp234,BP,M,45,Caucasian,1
+phchp235,MDD,M,54,African American,7
+phchp235,MDD,M,55,African American,3
+phchp235,MDD,M,55,African American,3
+phchp236,MDD,M,51,Caucasian,1
+phchp236,MDD,M,51,Caucasian,1
+phchp236,MDD,M,54,Caucasian,0
+phchp237,PTSD,M,39,Caucasian,5
+phchp237,PTSD,M,39,Caucasian,6
+phchp238,MDD,M,62,Caucasian,2
+phchp238,MDD,M,63,Caucasian,2
+phchp238,MDD,M,63,Caucasian,4
+phchp239,SZA,F,54,African American,2
+phchp239,SZA,F,54,African American,5
+phchp239,SZA,F,54,African American,1
+phchp240,MDD,F,55,Caucasian,5
+phchp240,MDD,F,55,Caucasian,3
+phchp240,MDD,F,56,Caucasian,4
+phchp241,BP,M,52,Caucasian,8
+phchp242,MDD,M,55,African American,3
+phchp242,MDD,M,57,African American,4
+phchp242,MDD,M,57,African American,0
+phchp243,PTSD,M,50,African American,3
+phchp243,PTSD,M,52,African American,4
+phchp247,MDD,M,55,African American,8
+phchp248,SZ,M,52,African American,0
+phchp248,SZ,M,52,African American,0
+phchp248,SZ,M,53,African American,2
+phchp248,SZ,M,55,African American,1
+phchp253,BP,M,25,Caucasian,6
+phchp253,BP,M,26,Caucasian,8
+phchp253,BP,M,26,Caucasian,6
+phchp254,MDD,F,49,Caucasian,6
+phchp254,MDD,F,49,Caucasian,8
+phchp254,MDD,F,50,Caucasian,7
+phchp258,BP,F,52,Caucasian,5
+phchp258,BP,F,52,Caucasian,8
+phchp258,BP,F,54,Caucasian,5
+phchp259,MDD,M,56,Caucasian,1
+phchp259,MDD,M,57,Caucasian,3
+phchp259,MDD,M,57,Caucasian,5
+phchp265,PTSD,M,43,Caucasian,2
+phchp266,MOOD,M,41,Caucasian,3
+phchp266,MOOD,M,42,Caucasian,5
+phchp266,MOOD,M,42,Caucasian,4
+phchp270,BP,M,36,Caucasian,
+phchp270,BP,M,36,Caucasian,
+phchp270,BP,M,41,Caucasian,1
+phchp270,BP,M,41,Caucasian,2
+phchp270,BP,M,42,Caucasian,"3,5"
+phchp270,BP,M,44,Caucasian,3
+phchp273,BP,M,27,Caucasian,6
+phchp273,BP,M,28,Caucasian,6
+phchp274,BP,M,48,Caucasian,1
+phchp274,BP,M,48,Caucasian,2
+phchp274,BP,M,48,Caucasian,2
+phchp274,BP,M,50,Caucasian,1
+phchp275,SZ,M,63,Caucasian,0
+phchp275,SZ,M,63,Caucasian,0
+phchp275,SZ,M,63,Caucasian,1
+phchp276,SZ,M,59,African American,0
+phchp276,SZ,M,59,African American,0
+phchp276,SZ,M,59,African American,0
+phchp276,SZ,M,61,African American,0
+phchp277,SZ,M,49,Caucasian,5
+phchp277,SZ,M,50,Caucasian,4
+phchp277,SZ,M,50,Caucasian,4
+phchp277,SZ,M,52,Caucasian,4
+phchp277,SZ,M,52,Caucasian,5
+phchp279,SZ,M,60,African American,6
+phchp279,SZ,M,61,African American,8
+phchp279,SZ,M,61,African American,6
+phchp279,SZ,M,61,African American,7
+phchp282,SZ,M,56,Caucasian,7
+phchp282,SZ,M,57,Caucasian,7
+phchp282,SZ,M,57,Caucasian,7
+phchp282,SZ,M,58,Caucasian,4
+phchp282,SZ,M,59,Caucasian,5
+phchp283,SZ,M,51,Caucasian,2
+phchp285,BP,F,56,Caucasian,4
+phchp285,BP,F,56,Caucasian,4
+phchp285,BP,F,57,Caucasian,10
+phchp286,BP,M,54,Caucasian,6
+phchp286,BP,M,54,Caucasian,7
+phchp286,BP,M,55,Caucasian,3
+phchp287,SZA,M,59,Caucasian,10
+phchp287,SZA,M,60,Caucasian,9
+phchp287,SZA,M,60,Caucasian,10
+phchp289,PTSD,F,50,Caucasian,2
+phchp290,BP,M,55,Caucasian,5
+phchp290,BP,M,55,Caucasian,4
+phchp290,BP,M,55,Caucasian,4
+phchp291,SZ,F,47,Caucasian,5
+phchp291,SZ,F,48,Caucasian,5
+phchp292,BP,M,42,Caucasian,0
+phchp292,BP,M,42,Caucasian,3
+phchp292,BP,M,42,Caucasian,4
+phchp293,BP,M,43,Caucasian,4
+phchp293,BP,M,44,Caucasian,0
+phchp294,BP,F,20,Caucasian,0
+phchp295,SZ,M,52,African American,0
+phchp296,BP,M,48,Caucasian,1
+phchp296,BP,M,49,Caucasian,2
+phchp296,BP,M,50,Caucasian,2
+phchp297,SZA,M,54,African American,0
+phchp297,SZA,M,55,African American,0
+phchp297,SZA,M,55,African American,0
+phchp297,SZA,M,57,African American,0
+phchp298,SZA,M,56,Caucasian,1
+phchp298,SZA,M,56,Caucasian,2
+phchp298,SZA,M,56,Caucasian,2
+phchp298,SZA,M,58,Caucasian,1
+phchp299,PTSD,M,54,Caucasian,7
+phchp299,PTSD,M,54,Caucasian,6
+phchp299,PTSD,M,54,Caucasian,6
+phchp299,PTSD,M,55,Caucasian,7
+phchp299,PTSD,M,56,Caucasian,7
+phchp300,BP,M,47,Caucasian,4
+phchp300,BP,M,47,Caucasian,5
+phchp300,BP,M,48,Caucasian,3
+phchp300,BP,M,49,Caucasian,2
+phchp300,BP,M,50,Caucasian,3
+phchp300,BP,M,50,Caucasian,3
+phchp302,BP,M,61,Caucasian,4
+phchp302,BP,M,62,Caucasian,4
+phchp302,BP,M,62,Caucasian,4
+phchp302,BP,M,63,Caucasian,4
+phchp304,MDD,M,52,Caucasian,6
+phchp304,MDD,M,52,Caucasian,7
+phchp304,MDD,M,52,Caucasian,6
+phchp307,PTSD,F,53,Caucasian,8
+phchp308,SZA,M,47,African American,0
+phchp308,SZA,M,47,African American,0
+phchp308,SZA,M,48,African American,0
+phchp308,SZA,M,49,African American,4
+phchp309,PTSD,F,27,Caucasian,4
+phchp309,PTSD,F,28,Caucasian,4
+phchp309,PTSD,F,28,Caucasian,1
+phchp310,MOOD,M,54,African American,6
+phchp310,MOOD,M,54,African American,6
+phchp310,MOOD,M,54,African American,7
+phchp311,MDD,F,60,African American,8
+phchp311,MDD,F,61,African American,8
+phchp311,MDD,F,61,African American,7
+phchp312,BP,M,64,Caucasian,0
+phchp312,BP,M,65,Caucasian,1
+phchp312,BP,M,65,caucasian,1
+phchp313,PTSD,M,46,African American,9
+phchp313,PTSD,M,46,African American,7
+phchp313,PTSD,M,46,African American,8
+phchp314,BP,M,54,Caucasian,2
+phchp314,BP,M,54,Caucasian,2
+phchp314,BP,M,54,Caucasian,0
+phchp315,MDD,M,62,Caucasian,4
+phchp316,BP,M,50,Caucasian,4
+phchp316,BP,M,50,Caucasian,3
+phchp316,BP,M,51,Caucasian,3
+phchp316,BP,M,51,Caucasian,3
+phchp316,BP,M,51,Caucasian,6
+phchp316,BP,M,52,Caucasian,3
+phchp318,MDD,F,57,Caucasian,3
+phchp318,MDD,F,57,Caucasian,2
+phchp318,MDD,F,58,Caucasian,2
+phchp319,PTSD,M,42,African American,4
+phchp319,PTSD,M,42,African American,8
+phchp319,PTSD,M,43,African American,8
+phchp319,PTSD,M,42,African American,8
+phchp319,PTSD,M,44,African American,4
+phchp319,PTSD,M,44,African American,5
+phchp320,BP,M,58,African American,6
+phchp320,BP,M,58,African American,6
+phchp320,BP,M,59,African American,7
+phchp322,BP,M,26,Caucasian,0
+phchp323,PTSD,M,33,Caucasian,4
+phchp324,MDD,M,33,African American,0
+phchp325,PTSD,M,44,Caucasian,4
+phchp325,PTSD,M,44,Caucasian,3
+phchp325,PTSD,M,44,Caucasian,4
+phchp325,PTSD,M,46,Caucasian,4
+phchp327,MDD,M,42,Caucasian,6
+phchp328,MDD,F,37,Caucasian,5
+phchp328,MDD,F,38,Caucasian,5
+phchp328,MDD,F,38,Caucasian,0
+phchp329,SZA,M,50,African American,8
+phchp329,SZA,M,51,African American,7
+phchp330,BP,F,45,Caucasian,4
+phchp331,BP,M,53,Caucasian,1
+phchp332,SZA,F,47,African American,3
+phchp333,PTSD,M,38,Caucasian,0
+phchp333,PTSD,M,38,Caucasian,0
+phchp333,PTSD,M,39,Caucasian,2
+phchp333,PTSD,M,39,Caucasian,1
+phchp334,BP,F,50,Caucasian,4
+phchp335,MDD,M,25,Caucasian,0
+phchp336,MDD,M,61,African American,6
+phchp336,MDD,M,62,African American,10
+phchp337,PTSD,M,34,Caucasian,0
+phchp337,PTSD,M,34,Caucasian,2
+phchp337,PTSD,M,35,Caucasian,0
+phchp338,BP,F,51,Caucasian,6
+phchp338,BP,F,51,Caucasian,8
+phchp338,BP,F,51,Caucasian,7
+phchp338,BP,F,52,Caucasian,6
+phchp338,BP,F,52,Caucasian,7
+phchp340,MDD,F,51,Caucasian,4
+phchp340,MDD,F,51,Caucasian,6
+phchp340,MDD,F,52,Caucasian,7
+phchp342,MDD,M,52,Caucasian,7
+phchp342,MDD,M,52,Caucasian,6
+phchp342,MDD,M,52,Caucasian,4
+phchp343,MDD,M,52,Caucasian,4
+phchp343,MDD,M,52,Caucasian,4
+phchp343,MDD,M,53,Caucasian,7
+phchp344,PTSD,M,33,Caucasian,0
+phchp345,PTSD,M,33,Caucasian,6
+phchp345,PTSD,M,34,Caucasian,4
+phchp345,PTSD,M,34,Caucasian,5
+phchp346,PTSD,F,36,African American,7
+phchp346,PTSD,F,37,African American,5
+phchp346,PTSD,F,37,African American,8
+phchp348,BP,M,52,Caucasian,5
+phchp349,PSYCH,M,59,Caucasian,4
+phchp350,BP,M,48,Caucasian,9
+phchp350,BP,M,48,Caucasian,7
+phchp350,BP,M,49,Caucasian,6
+phchp350,BP,M,49,Caucasian,7
+phchp351,MDD,M,44,Caucasian,0
+phchp351,MDD,M,44,Caucasian,1
+phchp352,MDD,M,24,African American,6
+phchp352,MDD,M,24,African American,6
+phchp352,MDD,M,25,African American,7
+phchp353,MDD,F,45,Caucasian,"3,5"
+phchp355,MDD,F,50,Caucasian,7
+phchp355,MDD,F,50,Caucasian,7
+phchp356,BP,M,40,Caucasian,3
+phchp357,BP,M,45,Caucasian,0
+phchp357,BP,M,45,Caucasian,1
+phchp357,BP,M,45,Caucasian,2
+phchp357,BP,M,45,Caucasian,1
+phchp357,BP,M,46,Caucasian,0
+phchp358,PTSD,M,52,Hispanic,5
+phchp358,PTSD,M,52,Hispanic,0
+phchp358,PTSD,M,53,Hispanic,5
+phchp359,PTSD,F,56,Caucasian,7
+phchp359,PTSD,F,56,Caucasian,6
+phchp359,PTSD,F,57,Caucasian,6
+phchp360,BP,F,56,Caucasian,7
+phchp360,BP,F,57,Caucasian,3
+phchp361,PTSD,F,59,African American,4
+phchp361,PTSD,F,60,African American,6
+phchp361,PTSD,F,60,African American,4
+phchp362,MDD,M,54,Caucasian,3
+phchp362,MDD,M,54,Caucasian,4
+phchp362,MDD,M,55,Caucasian,4
+phchp363,MDD,M,46,African American,1
+phchp363,MDD,M,48,African American,1
+phchp364,PTSD,F,40,Caucasian,0
+phchp365,MDD,M,59,African American,2
+phchp366,SZ,M,56,Caucasian,2
+phchp367,BP,M,48,Caucasian,8
+phchp367,BP,M,49,Caucasian,7
+phchp368,MDD,F,43,Caucasian,6
+phchp368,MDD,F,44,Caucasian,6
