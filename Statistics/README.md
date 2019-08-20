@@ -1,5 +1,5 @@
 # Statistics
-# Elena Williams
+#### Elena Williams
 
 
 
@@ -27,7 +27,6 @@
 
 References
 
-\newpage
 
 # 1. Introduction
 
@@ -122,7 +121,7 @@ Before performing a hypothesis tests I will look at the distributions of the var
 
 111 women and 371 men recorded their pain levels
 
-## 2.3. Visualising the Distribution
+### 2.3. Visualising the Distribution
 
 
 ```{r, warning=FALSE}
@@ -285,7 +284,6 @@ pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity o
 
 ```
 
-\newpage
 
 
 # 3. Testing the hypothesis
@@ -343,7 +341,6 @@ with(par(mai=c(1,2.5,1,1)),{plot(TukeyHSD(res.aov), las=1,cex.axis=0.4)})
 
 **Figure 5: Mean difference between the groups**
 
-\newpage
 
 # 4. Regression analysis 
 
@@ -428,8 +425,6 @@ Root Mean Squared Error
 table4 = subset(table4, !is.na(Difference))
 sqrt(mean(table4$Difference^2))
 ```
-
-\newpage
 
 # 5. Conclusion
 
