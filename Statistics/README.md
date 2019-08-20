@@ -1,10 +1,6 @@
----
-title: "Statistics"
-author: "Elena Williams"
-output:
-  word_document: default
-  pdf_document: default
----
+# Statistics
+# Elena Williams
+
 
 
 **Content structure:**
@@ -39,12 +35,12 @@ In the presented statistical report, I am going to analyze a dataset from a rece
 
 In the dataset there are 794 observations (patients) and 6 characteristics:
 
-* Participant ID: --- ID attached to each of the participant of the study
-* Diagnosis: --- sample included patients with psychiatric conditions like Bipolar disorder (BP),  Schizoaffective disorder (SZA), Schizophrenia (SZ), Major depressive disorder (MDD), Post-traumatic stress disorder (PTSD), Mood disorder (MOOD) and others. 
-* Gender: --- male or female
-* Age: --- age of the participants
-* Ethnicity: --- Caucasian, African American, Hispanic, Asian American, Mixed and Asian
-* Pain Scale: --- reported pain level on a scale from 1 to 10
+* Participant ID: - ID attached to each of the participant of the study
+* Diagnosis: - sample included patients with psychiatric conditions like Bipolar disorder (BP),  Schizoaffective disorder (SZA), Schizophrenia (SZ), Major depressive disorder (MDD), Post-traumatic stress disorder (PTSD), Mood disorder (MOOD) and others. 
+* Gender: - male or female
+* Age: - age of the participants
+* Ethnicity: - sample contained patients whose ethnicity was Caucasian, African American, Hispanic, Asian American, Mixed and Asian
+* Pain Scale: - reported pain level on a scale from 1 to 10
 
 The main objective of this study is to explore the connections between pain levels and demographic data.
 
@@ -74,7 +70,7 @@ set_theme(base = theme_minimal())
 
 # 2. Exploratory data analysis
 
-**a** Cleaning data
+### 2.1. Cleaning data
 
 I note that there are blank cells in the data set. The pain variable has 181 missings. These cells will be converted in NAs (namely missing data points in R) which allow us to progress further with the robust data analysis.
 
@@ -103,20 +99,17 @@ demographicDB$Ethnicity = as.factor(demographicDB$Ethnicity)
 
 ```
 
-**(b)** Setting hypothesis
+### 2.2. Setting hypothesis
 
 In a given sample we have 59 men and 58 women. I would like to examine whether the levels of 9 different biomarkers taken at the beginning of the study vary between males and females.
-
 
 
 The following hypothesis were set:
 
 *H0.1 : There is no difference in pain perception between men and women*
-
 *Ha.1: There is a difference in pain perception between men and women*
 
 *H0.2 : There is no difference in pain perception between the given diagnosis*
-
 *Ha.2: There is a difference in pain perception between the given diagnosis*
 
 
@@ -129,7 +122,7 @@ Before performing a hypothesis tests I will look at the distributions of the var
 
 111 women and 371 men recorded their pain levels
 
-**(c)** Visualising the Distribution
+## 2.3. Visualising the Distribution
 
 
 ```{r, warning=FALSE}
@@ -227,7 +220,7 @@ ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Age, fill=Diagnosi
 **Figure 4: The distribution of pain scores among the patients**
 
 
-**(d)** Comparing skewness and kurtosis of the factor variables 
+### 2.4. Comparing skewness and kurtosis of the factor variables 
 
 
 
@@ -278,7 +271,7 @@ knitr::kable(table_2, caption = "Skewness and Kurtosis coefficients", floating.e
 ```
 
 
-**d** Testing variables on homogenity of variances using Bartlett's test
+### 2.5. Testing variables on homogenity of variances using Bartlett's test
 
 Finally, I have checked the data on homogeneity of variances using Bartlett's test. Proteins IL.6 and CSF.1 have shown a significant P-value at 0.05 level. For these variables the variance is not homogeneous and correction is needed.
 
@@ -297,7 +290,7 @@ pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity o
 
 # 3. Testing the hypothesis
 
-**(a)** Two-sample T-test.
+### 3.1. Two-sample T-test.
 
 I have chosen a two-sample T-test in which the test statistic follows a Student's t-distribution under the null hypothesis [5]. 
 
@@ -320,7 +313,7 @@ pander::pander(table_4, caption = "Results of Two Sample t-test")
 ```
 
 
-**(b)** One-way ANOVA
+### 3.2. One-way ANOVA
 
 The one-way analysis of variance (ANOVA), also known as one-factor ANOVA, is an extension of independent two-samples t-test for comparing means in a situation where there are more than two groups. In one-way ANOVA, the data is organized into several groups base on one single grouping variable (also called factor variable). This tutorial describes the basic principle of the one-way ANOVA test and provides practical anova test examples in R software.
 
@@ -340,7 +333,7 @@ res.aov <- aov(Pain_VAS ~ Diagnosis, data = demographicDB) # p value 6.18e-05
 pander::pander(summary(res.aov), caption = "One-way ANOVA")
 ```
 
-**c** Tukey Honest Significant Differences
+### 3.3. Tukey Honest Significant Differences
 
 ```{r, message=FALSE, warning=F}
 
@@ -354,7 +347,7 @@ with(par(mai=c(1,2.5,1,1)),{plot(TukeyHSD(res.aov), las=1,cex.axis=0.4)})
 
 # 4. Regression analysis 
 
-**(a)** Scatter plot
+### 4.1. Scatter plot
 
 ```{r, warning=FALSE}
 ggplot(demographicDB, aes(x=Age, y=Pain_VAS)) +
@@ -370,7 +363,7 @@ ggplot(demographicDB, aes(x=Age, y=Pain_VAS)) +
 ```
 
 
-**b** Modelling
+### 4.2. Modelling
 
 I have constructed a regression model to make predictions on how well patients with medical conditions will recover. 
 
@@ -396,7 +389,7 @@ plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
 
 **Figure 6: The distribution of pain scores among the patients**
 
-**c** Multicollinearity
+### 4.3. Multicollinearity
 
 None of the variables in the model suffers from multicollinearity. Overall the model fits the data quite well.
 
@@ -410,7 +403,7 @@ pander::pander(car::vif(model1),caption = "")
 ```
 
 
-**(d)** Performance evaluation
+### 4.4. Performance evaluation
 
 Usung the previous model I have predicted the pain levels for the remaining 20 % of the patients. In the table below we note that some of the predicted values differ substantially from the actual one.
 
@@ -445,7 +438,7 @@ On a scale from 0 to 10 the prediction  which diverges on average from the actua
 
 
 
-References:
+## References:
 
 Niculescu, A.B., Le-Niculescu, H., Levey, D.F., Roseberry, K., Soe, K.C., Rogers, J., Khan, F., Jones, T., Judd, S., McCormick, M.A. and Wessel, A.R., 2019. Towards precision medicine for pain: diagnostic biomarkers and repurposed drugs. Molecular psychiatry, 24(4), p.501.
 
