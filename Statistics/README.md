@@ -105,13 +105,9 @@ In a given patients sample 111 women and 371 men have recordings of their pain l
 
 The following hypothesis were set:
 
-*H0.1 : There is no difference in pain sensations between men and women*
+Hypothesis 1. ***Null hypothesis** : There is no difference in pain sensations between men and women. **Alternative hypothesis** : There is a difference in pain sensations between men and women*
 
-*Ha.1: There is a difference in pain sensations between men and women*
-
-*H0.2 : There is no difference in pain sensations between the given diagnosis*
-
-*Ha.2: There is a difference in pain sensations between the given diagnosis*
+Hypothesis 2. ***Null hypothesis** : There is no difference in pain sensations between the given diagnosis. **Alternative hypothesis** : There is a difference in pain sensations between the given diagnosis*
 
 
 Based on the null hypothesis we assume that there is (HO.1) no difference in pain sensations between men and women and (H0.2) there is no difference in pain sensations between the patients with different diagnosis. Otherwise, the alternative hypothesis is that the true difference in means is not equal to 0.
@@ -178,7 +174,7 @@ dp2 <-dp2 + scale_fill_grey()  +
 multiplot(dp1,dp2, cols=2)
 
 ```
-![](images/image2.png)
+![](images/Image2.png)
 
 **Figure 2: The distribution of pain scores among the patients**
 
@@ -201,7 +197,7 @@ dp + coord_flip()+ scale_fill_grey(start = 0, end = 0.5)  +
         axis.ticks = element_blank()) 
 
 ```
-![](images/image3.png)
+![](images/Image3.png)
 
 **Figure 3: The distribution of pain scores among the patients**
 
