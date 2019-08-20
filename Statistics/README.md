@@ -1,4 +1,4 @@
-## *Statistical analysis: Exploring the connections between pain levels and patients' demographic characteristics*
+## Statistical analysis: Exploring the connections between pain levels and patients' demographic characteristics
 #### Elena Williams
 
 
@@ -6,23 +6,23 @@
 **Content structure:**
 
 1. Introduction
-2. Exploratory data analysis
+2. Exploratory Data Analysis
     + Data Cleaning 
     + Setting the Hypothesis
     + Visualising the Distribution 
-    + Comparing skewness and kurtosis of the factor variables 
-    + Testing variables on homogenity of variances using Bartlett's test
+    + Checking Skewness and Kurtosis
+    + Testing Variables on Homogenity of Variances using Bartlett's Test
 
-3. Testing the hypothesis the difference in means
-    + Two-tailed T-test
+3. Testing Differences Between Means
+    + Two-sample T-test
     + One-way ANOVA
-    + Computing Tukey Honest Significant Differences
+    + Tukey Honest Significant Differences
 
 4. Regression Analysis
+    + Scatter Plot
     + Building a Model
-    + Exploring Diagnostic Plots
-    + Checking Multicollinearity
-    + Evaluating the performance of the model on the test set calculating Root Mean Squared Error
+    + Multicollinearity Check using Variance Inflation Factor
+    + Performance Evaluation with Root Mean Squared Error
 5. Conclusion
 
 References
@@ -67,9 +67,9 @@ set_theme(base = theme_minimal())
 
 ```
 
-# 2. Exploratory data analysis
+# 2. Exploratory Data Analysis
 
-### 2.1. Cleaning data
+### 2.1. Data Cleaning
 
 I note that there are blank cells in the data set. The pain variable has 181 missings. These cells will be converted in NAs (namely missing data points in R) which allow us to progress further with the robust data analysis.
 
@@ -288,7 +288,7 @@ pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity o
 
 # 3. Testing the hypothesis
 
-### 3.1. Two-sample T-test.
+### 3.1. Two-sample T-test
 
 I have chosen a two-sample T-test in which the test statistic follows a Student's t-distribution under the null hypothesis [5]. 
 
