@@ -1,4 +1,4 @@
-## *Statistical analysis: Exploring the connections between pain levels and patients' demographic characteristics
+## *Statistical analysis: Exploring the connections between pain levels and patients' demographic characteristics*
 #### Elena Williams
 
 
