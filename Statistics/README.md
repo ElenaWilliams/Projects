@@ -46,7 +46,7 @@ In the study there were 794 observations (patients) and 6 characteristics given:
 
 The main objective of this study is to explore the connections between pain levels and demographic data.
 
----
+~~~~
 # Uploading the libraries
 library(psych)
 library(tidyr)
@@ -67,8 +67,7 @@ source("multiplot.R")
 
 # Setting the theme for linear regression plot
 set_theme(base = theme_minimal())
-
----
+~~~~
 
 # 2. Exploratory Data Analysis
 
