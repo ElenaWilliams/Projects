@@ -47,7 +47,6 @@ In the study there were 794 observations (patients) and 6 characteristics given:
 The main objective of this study is to explore the connections between pain levels and demographic data.
 
 ~~~~
-# Uploading the libraries
 library(psych)
 library(broom)
 library(stringr)
@@ -58,11 +57,7 @@ library(dplyr)
 library(plyr)
 library(sjPlot)
 library(sjmisc)
-
-# Uploading code for mupltiplot
 source("multiplot.R")
-
-# Setting the theme for linear regression plot
 set_theme(base = theme_minimal())
 ~~~~
 
@@ -71,37 +66,28 @@ set_theme(base = theme_minimal())
 ### 2.1. Data Cleaning
 
 I note that there are blank cells in the data set. The pain variable has 181 missings. These cells will be converted in NAs (namely missing data points in R) which allow us to progress further with the robust data analysis.
+First check the summary figures for the data set and note that there are blank cells in the table# I remove the first variable containing participants' IDs because it will not be used throughout the analysis and, thus, is not relevant for this study
+I rename a column with the pain scale for an easier access
 
 
 ```{r, warning=FALSE, message=FALSE}
-# Uploading the data
 demographicDB <- read.csv("demographic_data.csv")
-
-# summary(demographicDB) First check the summary figures for the data set and note that there are blank cells in the table
-
-# Cleaning data
-# I remove the first variable containing participants' IDs because it will not be used throughout the analysis and, thus, is not relevant for this study
+summary(demographicDB) 
 demographicDB = demographicDB[,-1] 
-# I rename a column with the pain scale for an easier access
-
 colnames(demographicDB) = c("Diagnosis", "Gender", "Age", "Ethnicity", "Pain_VAS") 
-
-# Converting missings into NAs for pain variable
 demographicDB$Pain_VAS[demographicDB$Pain_VAS==""] <- NA
 demographicDB$Diagnosis[demographicDB$Diagnosis==""] <- NA
-# Converting pain variable into numeric type
 demographicDB$Pain_VAS = as.character(demographicDB$Pain_VAS)
 demographicDB$Pain_VAS = as.numeric(demographicDB$Pain_VAS)
-
 demographicDB$Ethnicity = as.character(demographicDB$Ethnicity)
 demographicDB$Ethnicity = ifelse(str_detect(demographicDB$Ethnicity,"caucasian"),"Caucasian",demographicDB$Ethnicity)
 demographicDB$Ethnicity = as.factor(demographicDB$Ethnicity)
-
 ```
 
 ### 2.2. Setting hypothesis
 
 In a given patients sample 111 women and 371 men have recordings of their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
+
 
 The following hypothesis were set:
 
@@ -130,7 +116,6 @@ df.plot <- ggplot(demographicDB, aes(x = Pain_VAS)) +
         legend.position = "none",
         panel.grid.minor = element_blank(),
         axis.ticks = element_blank())+ labs(x="Pain level", y="Number of patients") 
-
 df.plot
 
 ```
@@ -148,9 +133,7 @@ demographicDB_violin = demographicDB %>%
 dp1 <- ggplot(demographicDB_violin, aes(x=Ethnicity, y=Pain_VAS, fill=Ethnicity)) + 
   geom_violin(trim=FALSE)+
   geom_boxplot(width=0.1, fill="white")+
-  labs(x="Ethnicity", y = "Pain level")
-
-dp1 = dp1 + scale_fill_grey()  +
+  labs(x="Ethnicity", y = "Pain level")+ scale_fill_grey()  +
   theme_bw()+
   theme(panel.border=element_blank(),
         axis.title = element_text(size = 9),
@@ -161,19 +144,16 @@ dp1 = dp1 + scale_fill_grey()  +
 dp2 <- ggplot(demographicDB, aes(x=Gender, y=Pain_VAS, fill=Gender)) + 
   geom_violin(trim=FALSE)+
   geom_boxplot(width=0.1, fill="white")+
-  labs(x="Gender", y = "Pain level")
-
-dp2 <-dp2 + scale_fill_grey()  +
+  labs(x="Gender", y = "Pain level")+ scale_fill_grey()  +
   theme_bw()+
   theme(panel.border=element_blank(),
         axis.title = element_text(size = 9),
         legend.position = "none",
         panel.grid.minor = element_blank(),
         axis.ticks = element_blank()) 
-
 multiplot(dp1,dp2, cols=2)
-
 ```
+
 ![](images/Image2.png)
 
 **Figure 2: The distribution of pain scores among the patients**
@@ -185,9 +165,7 @@ blahblah blah
 ```{r, warning=FALSE}
 dp <- ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Diagnosis, y=Pain_VAS, fill=Diagnosis,na.rm = TRUE)) + 
   geom_boxplot()+
-  labs(x="Diagnosis", y = "Pain level")
-
-dp + coord_flip()+ scale_fill_grey(start = 0, end = 0.5)  +
+  labs(x="Diagnosis", y = "Pain level")+ coord_flip()+ scale_fill_grey(start = 0, end = 0.5)  +
   theme_bw()+
   theme(panel.border=element_blank(),
         axis.title = element_text(size = 9),
@@ -274,14 +252,11 @@ knitr::kable(table_2, caption = "Skewness and Kurtosis coefficients", floating.e
 
 ### 2.5. Testing variables on homogenity of variances using Bartlett's test
 
-Finally, I have checked the data on homogeneity of variances using Bartlett's test. Proteins IL.6 and CSF.1 have shown a significant P-value at 0.05 level. For these variables the variance is not homogeneous and correction is needed.
+Finally, I have checked the data on homogeneity of variances using Bartlett's test. Proteins IL.6 and CSF.1 have shown a significant P-value at 0.05 level. For these variables the variance is homogeneous and correction does not needed.
 
 ```{r, message=FALSE}
- # p value is not significant at 0.005 level, the variance is homogeneous, correction does not needed
 bartlett.test(demographicDB$Pain_VAS,demographicDB$Gender)
-# p value is not significant at 0.005 level, the variance is homogeneous, correction does not needed
 bartlett.test(demographicDB$Pain_VAS,demographicDB$Diagnosis) 
-
 table_3 = data.frame("Varibale" = c("Gender", "Diagnosis"),"K-squared" = c(1.2859, 8.1294), "p-value" = c(0.2568, 0.2288))
 pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity of variances")
 
@@ -304,13 +279,11 @@ Tests with other proteins have shown no significant difference in means.
 To conclude, women and men with medical conditions causing pain have a mean difference in VEGF.A, TGF.beta.1, CXCL1 and CSF.1 proteins levels at inclusion. No significant differences were found in IL.8, OPG, IL.6, CXCL9, IL.18 protein levels.
 
 ```{r, message=FALSE, warning=F}
-
 t1=t.test(Pain_VAS~Gender,demographicDB, var.equal=T) # p-value = 0.001774
 table_4 <- map_df(list(t1), tidy)
 table_4 = table_4[,-(6:9)]
 colnames(table_4) = c("Mean-1", "Mean-2", "T-statistic", "P-value",   "DF")
 pander::pander(table_4, caption = "Results of Two Sample t-test")
-
 ```
 
 
@@ -337,9 +310,7 @@ pander::pander(summary(res.aov), caption = "One-way ANOVA")
 ### 3.3. Tukey Honest Significant Differences
 
 ```{r, message=FALSE, warning=F}
-
 with(par(mai=c(1,2.5,1,1)),{plot(TukeyHSD(res.aov), las=1,cex.axis=0.4)})
-
 ```
 ![](images/image5.png)
 
@@ -360,7 +331,6 @@ ggplot(demographicDB, aes(x=Age, y=Pain_VAS)) +
         axis.ticks = element_blank()) +
     ylab('Pain level') +
     xlab('Age')
-
 ```
 ![](images/image6.png)
 
@@ -380,10 +350,8 @@ set.seed(101)
 sample = sample.split(demographicDB, SplitRatio = .8)
 train = subset(demographicDB, sample == TRUE)
 test  = subset(demographicDB, sample == FALSE)
-
 model1 = lm(Pain_VAS~Age+Gender+Diagnosis, train)
 plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
-
 ```
 ![](images/image7.png)
 
@@ -396,7 +364,6 @@ None of the variables in the model suffers from multicollinearity. Overall the m
 Table 6: VIF
 
 ```{r, message=FALSE}
-pander::panderOptions('table.continues', '')
 pander::pander(car::vif(model1),caption = "")
 ```
 
@@ -411,7 +378,6 @@ Table 7: First five Actual vs Predicted values and their difference
 
 ```{r, message=FALSE}
 pred <- predict(model1,  newdata = test)
-
 table4 = as.data.frame(cbind(test$Pain_VAS, pred))
 colnames(table4) = c("Actual", "Predicted")
 table4$Difference = (table4$Actual-table4$Predicted)
