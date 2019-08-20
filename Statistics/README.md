@@ -138,6 +138,7 @@ df.plot <- ggplot(demographicDB, aes(x = Pain_VAS)) +
 df.plot
 
 ```
+![](images/image1.png)
 
 **Figure 1: The distribution of pain scores among the patients**
 
@@ -177,6 +178,7 @@ dp2 <-dp2 + scale_fill_grey()  +
 multiplot(dp1,dp2, cols=2)
 
 ```
+![](images/image2.png)
 
 **Figure 2: The distribution of pain scores among the patients**
 
@@ -199,6 +201,7 @@ dp + coord_flip()+ scale_fill_grey(start = 0, end = 0.5)  +
         axis.ticks = element_blank()) 
 
 ```
+![](images/image3.png)
 
 **Figure 3: The distribution of pain scores among the patients**
 
@@ -216,6 +219,8 @@ ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Age, fill=Diagnosi
         panel.grid.minor = element_blank(),
         axis.ticks = element_blank()) 
 ```
+
+![](images/image4.png)
 
 **Figure 4: The distribution of pain scores among the patients**
 
@@ -340,6 +345,7 @@ pander::pander(summary(res.aov), caption = "One-way ANOVA")
 with(par(mai=c(1,2.5,1,1)),{plot(TukeyHSD(res.aov), las=1,cex.axis=0.4)})
 
 ```
+![](images/image5.png)
 
 **Figure 5: Mean difference between the groups**
 
@@ -360,7 +366,9 @@ ggplot(demographicDB, aes(x=Age, y=Pain_VAS)) +
     xlab('Age')
 
 ```
+![](images/image6.png)
 
+**Figure 5: Mean difference between the groups**
 
 ### 4.2. Modelling
 
@@ -370,8 +378,6 @@ The dependent variable is a pain level measured one year after onset and indepen
 
 The results have shown that proteins OPG, TGF.beta.1 and IL.6 are strongly related to pain at 0.05 significance level. Both estimates have negative sign meaning that the higher the pain the lower the protein level or vice versa.
 
-
-Table 6: Results of Regression model
 
 ```{r,warning=FALSE}
 set.seed(101) 
@@ -383,8 +389,9 @@ model1 = lm(Pain_VAS~Age+Gender+Diagnosis, train)
 plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
 
 ```
+![](images/image7.png)
 
-**Figure 6: The distribution of pain scores among the patients**
+**Figure 7: The distribution of pain scores among the patients**
 
 ### 4.3. Multicollinearity
 
