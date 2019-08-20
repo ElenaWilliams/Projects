@@ -154,7 +154,7 @@ dp2 <- ggplot(demographicDB, aes(x=Gender, y=Pain_VAS, fill=Gender)) +
 multiplot(dp1,dp2, cols=2)
 ```
 
-![](images/Image2.png)
+![](images/image2.png)
 
 **Figure 2: The distribution of pain scores among the patients**
 
@@ -175,7 +175,7 @@ dp <- ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Diagnosis, y
         axis.ticks = element_blank()) 
 
 ```
-![](images/Image3.png)
+![](images/image3.png)
 
 **Figure 3: The distribution of pain scores among the patients**
 
