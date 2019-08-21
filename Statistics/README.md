@@ -1,13 +1,13 @@
 ## Statistical analysis: Exploring the connections between pain levels and patients' demographic characteristics
-#### Elena Williams
+##### Elena Williams
 
 
 
-### Content structure:
+#### Content structure:
 
 
-1. [Introduction](#introduction) 
-2. Exploratory Data Analysis
+[Introduction](#introduction) 
+[Exploratory Data Analysis](#Exploratory-Data-Analysis) 
     + Data Cleaning 
     + Setting the Hypothesis
     + Visualising the Distribution 
@@ -62,7 +62,7 @@ source("multiplot.R")
 set_theme(base = theme_minimal())
 ~~~~
 
-# 2. Exploratory Data Analysis
+# Exploratory Data Analysis
 
 ### 2.1. Data Cleaning
 
