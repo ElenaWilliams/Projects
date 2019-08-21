@@ -73,7 +73,6 @@ I rename a column with the pain scale for an easier access
 
 ```{r, warning=FALSE, message=FALSE}
 demographicDB <- read.csv("demographic_data.csv")
-summary(demographicDB) 
 demographicDB = demographicDB[,-1] 
 colnames(demographicDB) = c("Diagnosis", "Gender", "Age", "Ethnicity", "Pain_VAS") 
 demographicDB$Pain_VAS[demographicDB$Pain_VAS==""] <- NA
@@ -83,13 +82,15 @@ demographicDB$Pain_VAS = as.numeric(demographicDB$Pain_VAS)
 demographicDB$Ethnicity = as.character(demographicDB$Ethnicity)
 demographicDB$Ethnicity = ifelse(str_detect(demographicDB$Ethnicity,"caucasian"),"Caucasian",demographicDB$Ethnicity)
 demographicDB$Ethnicity = as.factor(demographicDB$Ethnicity)
+demographicDB_summary = demographicDB[,-2]
+pander::pander(summary(demographicDB_summary), caption = "Summary Statistics")
 ```
 
 ![](tables/table1.png)
 
 ### 2.2. Setting hypothesis
 
-Despite there are 158 female and 636 male patients,only 111 women and 371 men recorded their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
+Despite there are 158 female and 636 male patients in the sample, only 111 women and 371 men recorded their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
 
 
 The following hypothesis were set:
