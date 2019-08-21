@@ -4,8 +4,6 @@
 
 
 ### Content structure:
-     - [Specification](#specification) 
-     - [Dependencies Title](#dependencies-title) 
 
 
 1. [Introduction](#introduction) 
@@ -32,13 +30,8 @@ References
 
 _____________________________________________________________________________________________
 
-    ## Specification
-    Example text blah. Example text blah. Example text blah. Example text blah. 
-Example text blah. Example text blah. Example text blah. Example text blah. 
-Example text blah. Example text blah. Example text blah. Example text blah. 
-Example text blah. Example text blah. 
 
-# 1. Introduction
+# 1. [Introduction](#introduction) 
 
 In the presented report, I am going to analyse a dataset from a recent study published in Nature (Niculescu & et al, 2019) where scientists endeavored to identify objective blood biomarkers for pain, a subjective sensation with a biological basis. The sample of interest were psychiatric patients, a high risk group for co-morbid pain disorders and increased perception of pain. The data on demographic characterists was published along with the paper and will be examined in the following report. 
 
