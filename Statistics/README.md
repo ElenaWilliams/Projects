@@ -86,7 +86,7 @@ demographicDB$Ethnicity = as.factor(demographicDB$Ethnicity)
 
 ### 2.2. Setting hypothesis
 
-In a given patients sample 111 women and 371 men have recordings of their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
+Despite there are 158 female and 636 male patients,only 111 women and 371 men recorded their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
 
 
 The following hypothesis were set:
