@@ -4,8 +4,11 @@
 
 
 ### Content structure:
+     - [Specification](#specification) 
+     - [Dependencies Title](#dependencies-title) 
 
-1. Introduction
+
+1. [Introduction](#introduction) 
 2. Exploratory Data Analysis
     + Data Cleaning 
     + Setting the Hypothesis
@@ -29,6 +32,11 @@ References
 
 _____________________________________________________________________________________________
 
+    ## Specification
+    Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. 
 
 # 1. Introduction
 
