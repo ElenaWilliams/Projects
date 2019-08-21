@@ -84,6 +84,8 @@ demographicDB$Ethnicity = ifelse(str_detect(demographicDB$Ethnicity,"caucasian")
 demographicDB$Ethnicity = as.factor(demographicDB$Ethnicity)
 ```
 
+![](tables/table1.png)
+
 ### 2.2. Setting hypothesis
 
 Despite there are 158 female and 636 male patients,only 111 women and 371 men recorded their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
@@ -225,6 +227,8 @@ table_1$Kurtosis = round(table_1$Kurtosis, 2)
 
 knitr::kable(table_1, caption = "Skewness and Kurtosis coefficients", floating.environment="sidewaystable")
 ```
+![](tables/table2.png)
+
 
 Then I compared the coefficients of skewness and kurtosis for both genders. These measures represent the asymmetry and the *"tailedness"* of biomarker distribution. 
 Overall the skewness and kurtosis coefficients look all right for most of the variables except CXCL9. The estimated skewness is 2.73 and 1.8, the kurtosis is 11.5 and 6.87 for women and men respectively. High kurtosis indicates that we have rare patients in our sample with extreme protein levels.
@@ -248,6 +252,7 @@ table_2$Kurtosis = round(table_2$Kurtosis, 2)
 
 knitr::kable(table_2, caption = "Skewness and Kurtosis coefficients", floating.environment="sidewaystable")
 ```
+![](tables/table3.png)
 
 
 ### 2.5. Testing variables on homogenity of variances using Bartlett's test
@@ -262,6 +267,7 @@ pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity o
 
 ```
 
+![](tables/table4.png)
 
 
 # 3. Testing the hypothesis
@@ -286,6 +292,7 @@ colnames(table_4) = c("Mean-1", "Mean-2", "T-statistic", "P-value",   "DF")
 pander::pander(table_4, caption = "Results of Two Sample t-test")
 ```
 
+![](tables/table5.png)
 
 ### 3.2. One-way ANOVA
 
@@ -306,6 +313,8 @@ res.aov <- aov(Pain_VAS ~ Diagnosis, data = demographicDB) # p value 6.18e-05
 # Summary of the analysis
 pander::pander(summary(res.aov), caption = "One-way ANOVA")
 ```
+![](tables/table6.png)
+
 
 ### 3.3. Tukey Honest Significant Differences
 
@@ -366,6 +375,7 @@ Table 6: VIF
 ```{r, message=FALSE}
 pander::pander(car::vif(model1),caption = "")
 ```
+![](tables/table7.png)
 
 
 ### 4.4. Performance evaluation
@@ -385,6 +395,7 @@ table4$Predicted = round(table4$Predicted,1)
 table4$Difference = round(table4$Difference,1)
 pander::pander(head(table4,5),caption = "")
 ```
+![](tables/table8.png)
 
 Root Mean Squared Error is 2.8
 ```{r, message=FALSE}
