@@ -6,27 +6,27 @@
 #### Content structure:
 
 
-[Introduction](#introduction) 
-[Exploratory Data Analysis](#Exploratory-Data-Analysis) 
+1. [Introduction](#introduction) 
+2. [Exploratory Data Analysis](#Exploratory-Data-Analysis) 
     + Data Cleaning 
     + Setting the Hypothesis
     + Visualising the Distribution 
     + Checking Skewness and Kurtosis
     + Testing Variables on Homogenity of Variances using Bartlett's Test
 
-3. Testing Differences Between Means
+3. [Testing Differences Between Means](#Testing-Differences-Between-Means) 
     + Two-sample T-test
     + One-way ANOVA
     + Tukey Honest Significant Differences
 
-4. Regression Analysis
+4. [Regression Analysis](#Regression-Analysis) 
     + Scatter Plot
     + Building a Model
     + Multicollinearity Check using Variance Inflation Factor
     + Performance Evaluation with Root Mean Squared Error
-5. Conclusion
+5. [Conclusion](#Conclusion) 
 
-References
+[References](#References) 
 
 _____________________________________________________________________________________________
 
@@ -271,7 +271,7 @@ pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity o
 ![](tables/table4.png)
 
 
-# 3. Testing the hypothesis
+# Testing Differences Between Means
 
 ### 3.1. Two-sample T-test
 
@@ -327,7 +327,7 @@ with(par(mai=c(1,2.5,1,1)),{plot(TukeyHSD(res.aov), las=1,cex.axis=0.4)})
 **Figure 5: Mean difference between the groups**
 
 
-# 4. Regression analysis 
+# Regression Analysis 
 
 ### 4.1. Scatter plot
 
@@ -404,14 +404,14 @@ table4 = subset(table4, !is.na(Difference))
 sqrt(mean(table4$Difference^2))
 ```
 
-# 5. Conclusion
+# Conclusion
 
 To conclude, I think that the model is not very useful for predicting the pain level of the patients a year later.
 On a scale from 0 to 10 the prediction  which diverges on average from the actual values by 3 points may carry a big risk, especially in a setting of clinical decision-making which can result in significant consequences for the patients' health. 
 
 
 
-## References:
+## References
 
 Niculescu, A.B., Le-Niculescu, H., Levey, D.F., Roseberry, K., Soe, K.C., Rogers, J., Khan, F., Jones, T., Judd, S., McCormick, M.A. and Wessel, A.R., 2019. Towards precision medicine for pain: diagnostic biomarkers and repurposed drugs. Molecular psychiatry, 24(4), p.501.
 
