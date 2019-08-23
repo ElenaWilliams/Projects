@@ -89,18 +89,18 @@ pander::pander(summary(demographicDB_summary), caption = "Summary Statistics")
 ![](tables/table1.png)
 
 
-The decoding of the diagnosis abbreviation can be found in the #introduction. We note that the mean age in the sample is quite high, 49 years old, the majority of patients are causasians and african american. Th median pain level is 4.
+The decoding of the diagnosis abbreviation can be found in the Introduction. We note that the mean age in the sample is quite high, 49 years old, the majority of patients are causasians and african american. Th median pain level is 4.
 
 
 ### 2.2. Setting hypothesis
 
-It is not shown in table above but I can see it in the data that despite there are 158 female and 636 male patients in the sample, only 111 women and 371 men recorded their pain levels. In the further analysis I would like to examine (i) whether the pain sensations vary between males and females and (ii) whether there is a difference in pain sensations between groups of patients with different diagnosis.      
+It is not shown in the table above but I noticed that despite there are 158 female and 636 male patients in the sample, only 111 women and 371 men recorded their pain levels. In the further analysis I would like to examine (i) whether the pain sensations vary between males and females and (ii) whether there is a difference in pain sensations between groups of patients with different diagnosis.      
 
 The following hypothesis were set:
 
-Hypothesis 1. ***Null hypothesis** : There is no difference in pain sensations between men and women. **Alternative hypothesis** : There is a difference in pain sensations between men and women*
+<sup>Hypothesis 1. ***Null hypothesis** : There is no difference in pain sensations between men and women. **Alternative hypothesis** : There is a difference in pain sensations between men and women*</sup>
 
-Hypothesis 2. ***Null hypothesis** : There is no difference in pain sensations between the given diagnosis. **Alternative hypothesis** : There is a difference in pain sensations between the given diagnosis*
+<sup>Hypothesis 2. ***Null hypothesis** : There is no difference in pain sensations between the given diagnosis. **Alternative hypothesis** : There is a difference in pain sensations between the given diagnosis*</sup>
 
 
 Based on the null hypothesis we assume that there is (HO.1) no difference in pain sensations between men and women and (H0.2) there is no difference in pain sensations between the patients with different diagnosis. Otherwise, the alternative hypothesis is that the true difference in means is not equal to 0.
