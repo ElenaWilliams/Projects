@@ -66,10 +66,10 @@ set_theme(base = theme_minimal())
 
 ### 2.1. Data Cleaning
 
-I note that there are blank cells in the data set. The pain variable has 181 missings. These cells will be converted in NAs (namely missing data points in R) which allow us to progress further with the robust data analysis.
-First check the summary figures for the data set and note that there are blank cells in the table# I remove the first variable containing participants' IDs because it will not be used throughout the analysis and, thus, is not relevant for this study
-I rename a column with the pain scale for an easier access
+Firstly, I remove the variable containing participants' IDs because it will not be used throughout the analysis.
+Next, I rename a column with the pain scale into "Pain_VAS". VAS is a visual analogue scale which is a psychometric response scale often presented in questionnaires in the range between 0 and 10. 
 
+Subsequently, I noted that there are some blank cells in the data set. The pain variable has 181 missings. These cells will be converted in NAs, namely missing data points in R. This conversion allows us to exclude the obseravtions with missing data from further analysis. Finally, we can look at the summary statistics which you can find on the table 1. 
 
 ```{r, warning=FALSE, message=FALSE}
 demographicDB <- read.csv("demographic_data.csv")
@@ -88,10 +88,13 @@ pander::pander(summary(demographicDB_summary), caption = "Summary Statistics")
 
 ![](tables/table1.png)
 
+
+The decoding of the diagnosis abbreviation can be found in the #Introduction. We note that the mean age in the sample is quite high, 49 years old, the majority of patients are causasians and african american. Th median pain level is 4.
+
+
 ### 2.2. Setting hypothesis
 
-Despite there are 158 female and 636 male patients in the sample, only 111 women and 371 men recorded their pain levels. Firstly, I would like to examine whether the pain sensations vary between males and females. Secondly, I would like to test whether there is a difference in pain sensations between groups of patients with different diagnosis.      
-
+It is not shown in table above but I can see it in the data that despite there are 158 female and 636 male patients in the sample, only 111 women and 371 men recorded their pain levels. In the further analysis I would like to examine (i) whether the pain sensations vary between males and females and (ii) whether there is a difference in pain sensations between groups of patients with different diagnosis.      
 
 The following hypothesis were set:
 
