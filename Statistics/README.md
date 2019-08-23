@@ -89,7 +89,7 @@ pander::pander(summary(demographicDB_summary), caption = "Summary Statistics")
 ![](tables/table1.png)
 
 
-The decoding of the diagnosis abbreviation can be found in the #Introduction. We note that the mean age in the sample is quite high, 49 years old, the majority of patients are causasians and african american. Th median pain level is 4.
+The decoding of the diagnosis abbreviation can be found in the #introduction. We note that the mean age in the sample is quite high, 49 years old, the majority of patients are causasians and african american. Th median pain level is 4.
 
 
 ### 2.2. Setting hypothesis
