@@ -92,7 +92,7 @@ pander::pander(summary(demographicDB_summary), caption = "Summary Statistics")
 The decoding of the diagnosis abbreviation can be found in the Introduction. We note that the mean age in the sample is quite high, 49 years old, the majority of patients are causasians and african american. Th median pain level is 4.
 
 
-### 2.2. Setting hypothesis
+### 2.2. Setting the Hypothesis
 
 It is not shown in the table above but I noticed that despite there are 158 female and 636 male patients in the sample, only 111 women and 371 men recorded their pain levels. In the further analysis I would like to examine (i) whether the pain sensations vary between males and females and (ii) whether there is a difference in pain sensations between groups of patients with different diagnosis.      
 
@@ -113,6 +113,8 @@ Before performing hypothesis tests I will look at the distributions of the varia
 
 ### 2.3. Visualising the Distribution
 
+From the figure below we note that the majority of patents did not have any pain and very few did have a very strong pain. From that we can say that the pain scores have a slightly right-skewed distribution. Most of the patients had recorded their pain sensations from low to considerable level.
+
 
 ```{r, warning=FALSE}
 df.plot <- ggplot(demographicDB, aes(x = Pain_VAS)) +
@@ -131,7 +133,7 @@ df.plot
 **Figure 1: The distribution of pain scores among the patients**
 
 
-In figure 1 we note that the pain scores have a slightly right-skewed distribution. 
+On the next figure I wanted to compare the distribution of pain levels across patients with different gender and ethnical background. I have chosen to compare only African Americans and Causasians because they had a big enough sample size to draw some conclusions (other ethnicities had N<10). From the violin plots below we note that African Americans experience low pain as often as considerable pain. The patients with causasian ethnicity experience middle levels of pain as much often as low and high levels of pain. The mean for both groups is similar, however the standard deviation is bigger for African American patients. From the second plot we note that women experience much higher levels of pain on average than men. 
 
 ```{r,  warning=FALSE}
 demographicDB_violin = demographicDB %>%
@@ -163,7 +165,7 @@ multiplot(dp1,dp2, cols=2)
 
 ![](images/image2.png)
 
-**Figure 2: The distribution of pain scores among the patients**
+**Figure 2: The distribution of pain levels across patients with different gender and ethnical background**
 
 
 
@@ -184,7 +186,7 @@ dp <- ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Diagnosis, y
 ```
 ![](images/image3.png)
 
-**Figure 3: The distribution of pain scores among the patients**
+**Figure 3: The distribution of pain scores among the patients with different diagnosis**
 
 blah blah 
 
@@ -203,7 +205,7 @@ ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Age, fill=Diagnosi
 
 ![](images/image4.png)
 
-**Figure 4: The distribution of pain scores among the patients**
+**Figure 4: The distribution of patients age with different diagnosis**
 
 
 ### 2.4. Comparing skewness and kurtosis of the factor variables 
