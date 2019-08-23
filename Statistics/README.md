@@ -47,6 +47,7 @@ In the study there were 794 observations (patients) and 6 characteristics given:
 
 The main objective of this study is to explore the connections between pain levels and demographic data.
 
+I will start from uploading all the necessary libraries and then we will move on to the exploratory data anlysis.
 ~~~~
 library(psych)
 library(broom)
