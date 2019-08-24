@@ -263,15 +263,9 @@ pander::pander(table_3, caption = "Results of Bartlett's tests for homogeneity o
 
 ### 3.1. Two-sample T-test
 
-I have chosen a two-sample T-test in which the test statistic follows a Student's t-distribution under the null hypothesis [5]. 
+I have chosen a two-sample T-test in which the test statistic follows a Student's t-distribution under the null hypothesis. I  use this test to indentify whether the mean difference in pain sensations between two sexes is significant. 
 
-I have used this test to indentify whether the mean difference between two sexes is significant. Taking into consideration the results of Bartlett's test Welch Two-Sample T-test was applied for proteins IL.6 and CSF.1 .
-
-The results have shown that biomarkers VEGF.A, TGF.beta.1, CXCL1 and CSF.1 have a difference in means between men and women at 0.05 significance level. We reject the null hypothesis that the difference in means is equal to 0 and accept an alterantive hypothesis.
-
-Tests with other proteins have shown no significant difference in means.
-
-To conclude, women and men with medical conditions causing pain have a mean difference in VEGF.A, TGF.beta.1, CXCL1 and CSF.1 proteins levels at inclusion. No significant differences were found in IL.8, OPG, IL.6, CXCL9, IL.18 protein levels.
+The results have shown that males and females have a difference in means at 0.05 significance level. We reject the null hypothesis that the difference in means is equal to 0 and accept an alterantive hypothesis.
 
 ```{r, message=FALSE, warning=F}
 t1=t.test(Pain_VAS~Gender,demographicDB, var.equal=T) # p-value = 0.001774
@@ -285,21 +279,14 @@ pander::pander(table_4, caption = "Results of Two Sample t-test")
 
 ### 3.2. One-way ANOVA
 
-The one-way analysis of variance (ANOVA), also known as one-factor ANOVA, is an extension of independent two-samples t-test for comparing means in a situation where there are more than two groups. In one-way ANOVA, the data is organized into several groups base on one single grouping variable (also called factor variable). This tutorial describes the basic principle of the one-way ANOVA test and provides practical anova test examples in R software.
+The one-way analysis of variance (ANOVA), also known as one-factor ANOVA, is an extension of independent two-samples t-test for comparing means in a situation where there are more than two groups. 
 
+The null hypothesis is that the means of the different diagnosis groups experience the same levels of pain. The alternative  hypothesis is that at least one sample mean (pain level's mean) is not equal to the others across the patients with different diagnosis.
 
-ANOVA test hypotheses:
-
-Null hypothesis: the means of the different groups are the same
-Alternative hypothesis: At least one sample mean is not equal to the others.
-The observations are obtained independently and randomly from the population defined by the factor levels
-The data of each factor level are normally distributed.
-These normal populations have a common variance. (Levene’s test can be used to check this.)
+On the table 6 we note that the pain levels are not the same across the groups of patients with P-value = 6.18e-05. We reject the null hypothesis and accept the alternative one.
 
 ```{r, message=FALSE, warning=F}
-# Compute the analysis of variance
 res.aov <- aov(Pain_VAS ~ Diagnosis, data = demographicDB) # p value 6.18e-05
-# Summary of the analysis
 pander::pander(summary(res.aov), caption = "One-way ANOVA")
 ```
 ![](tables/table6.png)
@@ -307,17 +294,25 @@ pander::pander(summary(res.aov), caption = "One-way ANOVA")
 
 ### 3.3. Tukey Honest Significant Differences
 
+The Tukey Test is a post-hoc test based on the studentized range distribution. An ANOVA test can only tell if the results are significant overall, but The Tukey Test shows us exactly where those differences lie.
+
+The significant differences in pain levels' means were found between the groups of patients with Major depressive versus Bipolar disorder, Schizophrenia versus Major depressive disorder, Psychiatric versus Mood disorder and Schizophrenia versus Post-traumatic stress disorder.
+
+
 ```{r, message=FALSE, warning=F}
 with(par(mai=c(1,2.5,1,1)),{plot(TukeyHSD(res.aov), las=1,cex.axis=0.4)})
 ```
 ![](images/image5.png)
 
-**Figure 5: Mean difference between the groups**
+**Figure 4: Mean difference between the groups**
 
 
 # Regression Analysis 
 
 ### 4.1. Scatter plot
+
+Before building a model I will take a look at the distribution of values for two continuous variables Age and Pain levels.
+From the plot we note that there is no linear pattern. It is hard to judge whether there will be a relationship because of the differences in variables' scales.
 
 ```{r, warning=FALSE}
 ggplot(demographicDB, aes(x=Age, y=Pain_VAS)) +
@@ -336,12 +331,10 @@ ggplot(demographicDB, aes(x=Age, y=Pain_VAS)) +
 
 ### 4.2. Modelling
 
-I have constructed a regression model to make predictions on how well patients with medical conditions will recover. 
+I have constructed a regression model to make predictions on pain levels using their demographic data. The dependent variable is a reported pain level and independent variables are age, gender and diagnosis.
 
-The dependent variable is a pain level measured one year after onset and independent variables are biomarker levels at inclusion. Covariates such as age, sex and smoke status were also included in the model.
-
-The results have shown that proteins OPG, TGF.beta.1 and IL.6 are strongly related to pain at 0.05 significance level. Both estimates have negative sign meaning that the higher the pain the lower the protein level or vice versa.
-
+The results have shown that Age is strongly related to pain at 0.05 significance level. The estimate has a positive sign meaning that the higher the pain the higher the age. The diagnosis such as Major depressive and Post-traumatic stress disorders have also shown a relativey strong positive correlation with pain sensations.
+The Adjusted R-squared is 0.07, the model explains 7% of the distribution, which is not great but still an acceptable rate in the social sciences.
 
 ```{r,warning=FALSE}
 set.seed(101) 
@@ -353,13 +346,11 @@ plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
 ```
 ![](images/image7.png)
 
-**Figure 7: The distribution of pain scores among the patients**
+**Figure 6: The distribution of pain scores among the patients**
 
 ### 4.3. Multicollinearity
 
 None of the variables in the model suffers from multicollinearity. Overall the model fits the data quite well.
-
-Table 6: VIF
 
 ```{r, message=FALSE}
 pander::pander(car::vif(model1),caption = "")
@@ -371,9 +362,7 @@ pander::pander(car::vif(model1),caption = "")
 
 Usung the previous model I have predicted the pain levels for the remaining 20 % of the patients. In the table below we note that some of the predicted values differ substantially from the actual one.
 
-To evaluate how well the model predicts the pain level I have used an error metric called Root Mean Squared Error. I first have squared the difference between the predicted and the actual values. Then I have calculated the mean and took the square root of it. The average deviation of the estimates from the actual values is 3.3. 
-
-Table 7: First five Actual vs Predicted values and their difference
+To evaluate how well the model predicts the pain level I have used an error metric called Root Mean Squared Error. I first have squared the difference between the predicted and the actual values. Then I have calculated the mean and took the square root of it. The average deviation of the estimates from the actual values is 2.8. 
 
 ```{r, message=FALSE}
 pred <- predict(model1,  newdata = test)
@@ -386,7 +375,8 @@ pander::pander(head(table4,5),caption = "")
 ```
 ![](tables/table8.png)
 
-Root Mean Squared Error is 2.8
+The following code was used to calculate the Root Mean Squared Error which equals to 2.8.
+
 ```{r, message=FALSE}
 table4 = subset(table4, !is.na(Difference))
 sqrt(mean(table4$Difference^2))
@@ -394,7 +384,7 @@ sqrt(mean(table4$Difference^2))
 
 # Conclusion
 
-To conclude, I think that the model is not very useful for predicting the pain level of the patients a year later.
+To conclude, I think that the model is not very useful for predicting the pain level of the patients.
 On a scale from 0 to 10 the prediction  which diverges on average from the actual values by 3 points may carry a big risk, especially in a setting of clinical decision-making which can result in significant consequences for the patients' health. 
 
 
