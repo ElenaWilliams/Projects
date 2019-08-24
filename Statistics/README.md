@@ -350,7 +350,7 @@ plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
 
 ### 4.3. Multicollinearity
 
-None of the variables in the model suffers from multicollinearity. Overall the model fits the data quite well.
+None of the variables in the model suffers from multicollinearity. 
 
 ```{r, message=FALSE}
 pander::pander(car::vif(model1),caption = "")
@@ -387,7 +387,7 @@ sqrt(mean(table4$Difference^2))
 To conclude, I think that the model is not very useful for predicting the pain level of the patients.
 On a scale from 0 to 10 the prediction  which diverges on average from the actual values by 3 points may carry a big risk, especially in a setting of clinical decision-making which can result in significant consequences for the patients' health. 
 
-
+The overall study has supported the notion that women experience on average higher pain sensations than men. The report has also shown that some of the conditions such as mood disorders, major depressive and post-traumatic stress disorders correlate with higher pain levels. Which brings us to conclusion of many other studies that what happens in the head can cause a physical pain.
 
 ## References
 
