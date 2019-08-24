@@ -350,7 +350,7 @@ plot_model(model1,sort.est = TRUE,show.values = TRUE, value.offset = .3)
 
 ### 4.3. Multicollinearity
 
-None of the variables in the model suffers from multicollinearity. 
+None of the variables in the model suffers from multicollinearity which is a phenomenon in which one predictor variable in a multiple regression model can be linearly predicted from the others with a substantial degree of accuracy.
 
 ```{r, message=FALSE}
 pander::pander(car::vif(model1),caption = "")
