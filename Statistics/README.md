@@ -134,7 +134,7 @@ df.plot
 **Figure 1: The distribution of pain scores among the patients**
 
 
-On the next figure I wanted to compare the distribution of pain levels across patients with different gender and ethnical background. I have chosen to compare only African Americans and Causasians because they had a big enough sample size to draw some conclusions (other ethnicities had N<10). From the violin plots below we note that African Americans experience low pain as often as considerable pain. The patients with causasian ethnicity experience middle levels of pain as much often as low and high levels of pain. The mean for both groups is similar, however the standard deviation is bigger for African American patients. From the second plot we note that women experience much higher levels of pain on average than men. 
+On the next figure I wanted to compare the distribution of pain levels across patients with different gender and ethnical background. I have chosen to compare only African Americans and Causasians. Both of these groups had a big enough sample size so we could draw some conclusions based on comparison figures (other ethnicities had N<10). From the violin plots below we note that African Americans experience low pain as often as considerable pain. The patients with causasian ethnicity experience middle levels of pain as much often as low and high levels of pain. The mean for both groups is similar, however the standard deviation is bigger for African American patients. From the second plot we note that women experience much higher levels of pain on average than men. 
 
 ```{r,  warning=FALSE}
 demographicDB_violin = demographicDB %>%
@@ -168,9 +168,8 @@ multiplot(dp1,dp2, cols=2)
 
 **Figure 2: The distribution of pain levels across patients with different gender and ethnical background**
 
-
-
-blahblah blah
+Now I would like to compare pain levels across parients with different diagnosis. From the figure below we note that patients with Schizoaffective, Post-traumatic stress and Mood disorders have reported much higher pain levels on average.
+Meanwhile patients with Schizophrenia and Psychiatric disorder have reported considerably lower pain senasations.
 
 ```{r, warning=FALSE}
 dp <- ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Diagnosis, y=Pain_VAS, fill=Diagnosis,na.rm = TRUE)) + 
@@ -189,32 +188,14 @@ dp <- ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Diagnosis, y
 
 **Figure 3: The distribution of pain scores among the patients with different diagnosis**
 
-blah blah 
-
-
-
-
-```{r,  warning=FALSE}
-ggplot(data = subset(demographicDB, !is.na(Diagnosis)), aes(x=Age, fill=Diagnosis)) +
-  geom_histogram( color="#e9ecef", alpha=0.6) +
-  theme_bw()+
-  theme(panel.border=element_blank(),
-        axis.title = element_text(size = 9),
-        panel.grid.minor = element_blank(),
-        axis.ticks = element_blank()) 
-```
-
-![](images/image4.png)
-
-**Figure 4: The distribution of patients age with different diagnosis**
-
 
 ### 2.4. Comparing skewness and kurtosis of the factor variables 
 
 
+Before performing any tests it is important to check data on assumptions about the normality of distribution. Further I will examine skewness and kurtosis of the factor variables such as Gender and Diagnosis and then apply Bartlett's test.
 
-Then I compared the coefficients of skewness and kurtosis for both genders. These measures represent the asymmetry and the *"tailedness"* of biomarker distribution. 
-Overall the skewness and kurtosis coefficients look all right for most of the variables except CXCL9. The estimated skewness is 2.73 and 1.8, the kurtosis is 11.5 and 6.87 for women and men respectively. High kurtosis indicates that we have rare patients in our sample with extreme protein levels.
+On the table 2 below we note the coefficients of skewness and kurtosis of pain levels for all the given diagnosis. These measures represent the asymmetry and the *"tailedness"* of pain's distribution for each diagnosis. 
+Overall the skewness and kurtosis coefficients look all right for most of the diagnosis categories. We do not observe high kurtosis which would indicate that we have rare patients in our sample with extreme pain levels.
 
 ```{r comment='',  message=FALSE, results='asis'}
 
@@ -238,8 +219,8 @@ knitr::kable(table_1, caption = "Skewness and Kurtosis coefficients", floating.e
 ![](tables/table2.png)
 
 
-Then I compared the coefficients of skewness and kurtosis for both genders. These measures represent the asymmetry and the *"tailedness"* of biomarker distribution. 
-Overall the skewness and kurtosis coefficients look all right for most of the variables except CXCL9. The estimated skewness is 2.73 and 1.8, the kurtosis is 11.5 and 6.87 for women and men respectively. High kurtosis indicates that we have rare patients in our sample with extreme protein levels.
+Then I compared the coefficients of skewness and kurtosis of pain levels between the genders. 
+Again the skewness and kurtosis coefficients look good. We note again that men on average has lamost 1 level lower pain sensations than women.
 
 ```{r comment='', message=FALSE, results='asis'}
 
@@ -265,7 +246,7 @@ knitr::kable(table_2, caption = "Skewness and Kurtosis coefficients", floating.e
 
 ### 2.5. Testing variables on homogenity of variances using Bartlett's test
 
-Finally, I have checked the data on homogeneity of variances using Bartlett's test. Proteins IL.6 and CSF.1 have shown a significant P-value at 0.05 level. For these variables the variance is homogeneous and correction does not needed.
+Finally, I will check the Gender and Diagnosis variables on homogeneity of variances using Bartlett's test. Both variables have not shown a significant P-value at 0.05 level. For these variables the variance is homogeneous and correction does not needed.
 
 ```{r, message=FALSE}
 bartlett.test(demographicDB$Pain_VAS,demographicDB$Gender)
